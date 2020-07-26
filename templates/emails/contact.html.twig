@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Nom du bien : {{contact.firstname}}
+        <a href="{{url('property.show', {id: contact.property.id, slug: contact.property.slug})}}"></a>
+    </h2>
+    <h5>Prenom : {{contact.firstname}}</h5>
+    <h5>Nom : {{contact.lastname}}</h5>
+    <h5>Téléphone : {{contact.phone}}</h5>
+    <h5>Message : {{contact.message|nl2br}}</h5>
+</div>
