@@ -1,0 +1,39 @@
+metrics:
+    services:
+        label: "Appels du Container de Services"
+        matching_calls:
+            php:
+                - callee: 
+                    selector: '=Symfony\Component\DependencyInjection\Container::get'
+                    argument: {1: "^"}
+tests:
+    # Déclaration d'une nouvelle métrique
+    "Tests des appels au Container de Services"
+        path: "/.*"
+        assertions:
+            - metrics.services.count < 30
+            - metrics.services.wall_time < 20ms
+    "La page d'accueil":
+        path: "/.*"
+        assertions:
+            - main.wall_time < 300ms
+            - main.memory < 20Mb
+    "Tests spécifiques à Symfony":
+        path: "/.*"
+        assertions:
+            - metrics.symfony.kernel.debug.count == 0 # en mode production
+            - metrics.symfony.yaml.reads.count == 0 # mise en cache du YAML
+    "Bonnes pratiques pour Symfony":
+        path: "/.*"
+        assertions:
+            # Pas de compilation Twig
+            - metrics.twig.compile.count == 0
+            # Pas de contrôle de méta-données Symfony
+            - metrics.symfony.config_check.count == 0
+            # Le cache Doctrine est utilisé
+            - metrics.doctrine.annotations.parsed.count
+            - metrics.doctrine.annotations.read.count
+            - metrics.doctrine.entities.metadata.count
+            - metrics.doctrine.proxies.generated.count == 0
+            # Le Yaml n'est pas utilisé en production
+            - metrics.symfony.yaml.reads.count == 0
