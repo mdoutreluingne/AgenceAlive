@@ -1,18 +1,4 @@
-metrics:
-    services:
-        label: "Appels du Container de Services"
-        matching_calls:
-            php:
-                - callee: 
-                    selector: '=Symfony\Component\DependencyInjection\Container::get'
-                    argument: {1: "^"}
 tests:
-    # Déclaration d'une nouvelle métrique
-    "Tests des appels au Container de Services"
-        path: "/.*"
-        assertions:
-            - metrics.services.count < 30
-            - metrics.services.wall_time < 20ms
     "La page d'accueil":
         path: "/.*"
         assertions:
@@ -37,3 +23,11 @@ tests:
             - metrics.doctrine.proxies.generated.count == 0
             # Le Yaml n'est pas utilisé en production
             - metrics.symfony.yaml.reads.count == 0
+    '.env configuration should not be parsed in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        assertions:
+            - { label: null, expression: 'metrics.symfony.dotenv.parse.count == 0' }
+        exclude: {  }
