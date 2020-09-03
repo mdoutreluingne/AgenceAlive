@@ -33,7 +33,7 @@
 					m²</h2>
 				<h4 class="text-danger">{{properties.formatPrice}}€</h4>
 				<a href="" class="btn btn-primary" id="contactButton" {% if form.vars.submitted %}style="display: none;"{% endif %}>Contacter l'agence</a>
-				<div class="mt-4" id="contactForm" {% if not form.vars.submitted %}style="display: none;"{% endif %}>
+				<div class="mt-4" id="contactForm" {% if not form.vars.submitted %} style="display: none;"{% endif %}>
 					{{form_start(form)}}
 					<div class="row">
 						<div class="col">{{form_row(form.firstname)}}</div>
@@ -44,9 +44,6 @@
 						<div class="col">{{form_row(form.email)}}</div>
 					</div>
 					{{form_rest(form)}}
-					<div class="form-group">
-						<button class="btn btn-primary">Envoyer</button>
-					</div>
 					{{form_end(form)}}
 				</div>
 			</div>
