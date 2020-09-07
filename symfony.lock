@@ -145,6 +145,9 @@
     "lorenzo/pinky": {
         "version": "1.0.5"
     },
+    "mdoutreluingne/recaptcha-bundle": {
+        "version": "v1.0.1"
+    },
     "monolog/monolog": {
         "version": "2.1.0"
     },
