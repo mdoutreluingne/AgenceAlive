@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log{% endblock %}
+
+{% block body %}
+
+<div class="logs">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Message</th>
+                <th scope="col">Level</th>
+                <th scope="col">Level name</th>
+                <th scope="col">Adresse IP</th>
+                <th scope="col">Url</th>
+                <th scope="col">User</th>
+                <th scope="col">Created at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in AllLogs %}
+                <tr>
+                    <td>{{ log.message }}</td>
+                    <td>{{ log.level }}</td>
+                    <td>{{ log.levelName }}</td>
+                    <td>{{ log.extra.clientIp }}</td>
+                    <td>{{ log.extra.url }}</td>
+                    <td>{{ log.extra.user }}</td>
+                    <td>{{ log.createdAt|date("d/m/Y H:i:s", "Europe/Paris") }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

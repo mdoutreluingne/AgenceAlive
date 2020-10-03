@@ -61,6 +61,7 @@ class PropertyRepository extends ServiceEntityRepository
     public function findLatest(): array
     {
         return $this->findVisibleQuery()
+            ->orderBy('p.created', 'DESC')
             ->setMaxResults(4)
             ->getQuery()
             ->getResult();

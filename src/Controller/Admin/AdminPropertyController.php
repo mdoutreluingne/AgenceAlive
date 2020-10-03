@@ -5,10 +5,9 @@ namespace App\Controller\Admin;
 use App\Entity\Option;
 use App\Entity\Property;
 use App\Form\PropertyType;
-use Psr\Log\LoggerInterface;
-use Doctrine\ORM\EntityManager;
 use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,13 +26,10 @@ class AdminPropertyController extends AbstractController
      */
     private $em;
 
-    private $logger;
-
-    public function __construct(PropertyRepository $repository, EntityManagerInterface $em, LoggerInterface $dbLogger)
+    public function __construct(PropertyRepository $repository, EntityManagerInterface $em)
     {
         $this->repository = $repository;
         $this->em = $em;
-        $this->logger = $dbLogger;
     }
 
     /**
@@ -41,7 +37,6 @@ class AdminPropertyController extends AbstractController
      */
     public function index()
     {
-        //$this->logger->info("tuto test");
         $properties = $this->repository->findAll();
         return $this->render('admin_property/index.html.twig', [
             'properties' => $properties,
@@ -57,10 +52,12 @@ class AdminPropertyController extends AbstractController
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
 
+
         //Ajoute données dans la bdd
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->em->persist($property);
-            $this->em->flush();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($property);
+            $entityManager->flush();
             $this->addFlash('success', 'Bien créé avec success');
             return $this->redirectToRoute('admin.property.index');
         }
@@ -80,6 +77,7 @@ class AdminPropertyController extends AbstractController
 
         //Change les données dans la bdd
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($property);
             $this->em->flush();
             $this->addFlash('success', 'Bien modifié avec success');
             return $this->redirectToRoute('admin.property.index');
