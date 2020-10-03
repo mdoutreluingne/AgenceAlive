@@ -11,20 +11,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    private $logger;
-
-    public function __construct(LoggerInterface $logger)
-    {
-        $this->logger = $logger;
-    }
 
     /**
      * @Route("/", name="home")
      * @return Response
      */
-    public function index(PropertyRepository $repository, LoggerInterface $logger): Response
+    public function index(PropertyRepository $repository): Response
     {
-        $this->logger->info("Notre premier log");
         $properties = $repository->findLatest();
         return $this->render('pages/home.html.twig', [
             'properties' => $properties

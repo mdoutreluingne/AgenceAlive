@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Serializable;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -10,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User implements UserInterface, Serializable
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -34,6 +36,16 @@ class User implements UserInterface, Serializable
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Log::class, mappedBy="user")
+     */
+    private $logs;
+
+    public function __construct()
+    {
+        $this->logs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -110,30 +122,33 @@ class User implements UserInterface, Serializable
     }
 
     /**
-     * Transforme objet en chaine
-     *
-     * @return void
+     * @return Collection|Log[]
      */
-    public function serialize()
+    public function getLogs(): Collection
     {
-        return serialize([
-            $this->id,
-            $this->username,
-            $this->password
-        ]);
+        return $this->logs;
     }
-    /**
-     * Transforme chaine en object
-     *
-     * @param Serializable
-     * @return void
-     */
-    public function unserialize($serializable)
+
+    public function addLog(Log $log): self
     {
-        list(
-            $this->id,
-            $this->username,
-            $this->password
-        ) = unserialize($serializable, ['allowed_classes' => false]);
+        if (!$this->logs->contains($log)) {
+            $this->logs[] = $log;
+            $log->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLog(Log $log): self
+    {
+        if ($this->logs->contains($log)) {
+            $this->logs->removeElement($log);
+            // set the owning side to null (unless already changed)
+            if ($log->getUser() === $this) {
+                $log->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
