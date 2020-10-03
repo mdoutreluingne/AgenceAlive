@@ -3,8 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Log;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 
 class AdminLogController extends AbstractController
 {
@@ -13,6 +15,7 @@ class AdminLogController extends AbstractController
      */
     public function index()
     {
+        throw new Exception('Test');
         $logRepository = $this->getDoctrine()->getRepository(Log::class);
         $AllLogs = $logRepository->findLastAllLog();
         return $this->render('admin_log/index.html.twig', [
