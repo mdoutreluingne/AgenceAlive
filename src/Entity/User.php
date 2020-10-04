@@ -52,9 +52,15 @@ class User implements UserInterface
      */
     private $isVerified = false;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Property::class, mappedBy="users")
+     */
+    private $properties;
+
     public function __construct()
     {
         $this->logs = new ArrayCollection();
+        $this->properties = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -187,6 +193,34 @@ class User implements UserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Property[]
+     */
+    public function getProperties(): Collection
+    {
+        return $this->properties;
+    }
+
+    public function addProperty(Property $property): self
+    {
+        if (!$this->properties->contains($property)) {
+            $this->properties[] = $property;
+            $property->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProperty(Property $property): self
+    {
+        if ($this->properties->contains($property)) {
+            $this->properties->removeElement($property);
+            $property->removeUser($this);
+        }
 
         return $this;
     }

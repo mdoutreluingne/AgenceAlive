@@ -131,10 +131,16 @@ class Property
      */
     private $options;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="properties")
+     */
+    private $users;
+
     public function __construct()
     {
         $this->created = new DateTime();
         $this->options = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -399,6 +405,32 @@ class Property
         if ($this->options->contains($option)) {
             $this->options->removeElement($option);
             $option->removeProperty($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->contains($user)) {
+            $this->users->removeElement($user);
         }
 
         return $this;
