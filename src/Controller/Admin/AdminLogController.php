@@ -15,7 +15,6 @@ class AdminLogController extends AbstractController
      */
     public function index()
     {
-        throw new Exception('Test');
         $logRepository = $this->getDoctrine()->getRepository(Log::class);
         $AllLogs = $logRepository->findLastAllLog();
         return $this->render('admin_log/index.html.twig', [
