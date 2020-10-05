@@ -98,7 +98,7 @@ class LoginAuthenticator extends AbstractFormLoginAuthenticator implements Passw
 
         //Redirection selon le role du user
         if ($token->getUser()->getRoles()[0] === "ROLE_USER") {
-            return new RedirectResponse($this->urlGenerator->generate('dashboard.property'));
+            return new RedirectResponse($this->urlGenerator->generate('dashboard.property.index'));
         } else {
             return new RedirectResponse($this->urlGenerator->generate('admin.property.index'));
         }

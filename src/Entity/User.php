@@ -53,7 +53,7 @@ class User implements UserInterface
     private $isVerified = false;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Property::class, mappedBy="users")
+     * @ORM\OneToMany(targetEntity=Property::class, mappedBy="users")
      */
     private $properties;
 
@@ -209,7 +209,7 @@ class User implements UserInterface
     {
         if (!$this->properties->contains($property)) {
             $this->properties[] = $property;
-            $property->addUser($this);
+            $property->setUsers($this);
         }
 
         return $this;
@@ -219,9 +219,13 @@ class User implements UserInterface
     {
         if ($this->properties->contains($property)) {
             $this->properties->removeElement($property);
-            $property->removeUser($this);
+            // set the owning side to null (unless already changed)
+            if ($property->getUsers() === $this) {
+                $property->setUsers(null);
+            }
         }
 
         return $this;
     }
+
 }

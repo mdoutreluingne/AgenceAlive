@@ -132,7 +132,7 @@ class Property
     private $options;
 
     /**
-     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="properties")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="properties")
      */
     private $users;
 
@@ -140,7 +140,6 @@ class Property
     {
         $this->created = new DateTime();
         $this->options = new ArrayCollection();
-        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -410,29 +409,16 @@ class Property
         return $this;
     }
 
-    /**
-     * @return Collection|User[]
-     */
-    public function getUsers(): Collection
+    public function getUsers(): ?User
     {
         return $this->users;
     }
 
-    public function addUser(User $user): self
+    public function setUsers(?User $users): self
     {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-        }
+        $this->users = $users;
 
         return $this;
     }
 
-    public function removeUser(User $user): self
-    {
-        if ($this->users->contains($user)) {
-            $this->users->removeElement($user);
-        }
-
-        return $this;
-    }
 }

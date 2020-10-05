@@ -1,10 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig'%}
 
-{% block title %}Hello DashboardPropertyController!{% endblock %}
+{% block title %}Gérer les biens{% endblock %}
 
 {% block body %}
-
-<div class="container mt-4">
+	<div class="container mt-4">
 
         <h1>Gérer les biens</h1>
 
@@ -14,11 +13,7 @@
             </div>
         {% endfor %}
 
-        {% for flashError in app.flashes('verify_email_error') %}
-            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-        {% endfor %}
-
-    <table class="table table-striped">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Titre</th>
@@ -29,8 +24,8 @@
                 {% for property in properties %}
                 <tr>
                     <td>{{property.title}}</td>
-                    <td><a href="{{path('dashboard.property.edit', {id: property.id})}}" class="btn btn-secondary">Editer</a>
-                    <form action="{{path('dashboard.property.delete', {id: property.id})}}" method="post" style="display: inline-block" onsubmit="return confirm('Etes-vous sur ?')">
+                    <td><a href="{{path('admin.property.edit', {id: property.id})}}" class="btn btn-secondary">Editer</a>
+                    <form action="{{path('admin.property.delete', {id: property.id})}}" method="post" style="display: inline-block" onsubmit="return confirm('Etes-vous sur ?')">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{csrf_token('delete' ~ property.id)}}">
                         <button class="btn btn-danger">Supprimer</button>
@@ -42,7 +37,7 @@
         </table>
 
         <div class="text-right">
-            <a href="{{path('dashboard.property.new')}}" class="btn btn-primary">Créer un nouveau bien</a>
+            <a href="{{path('admin.property.new')}}" class="btn btn-primary">Créer un nouveau bien</a>
         </div>
-</div>
-{% endblock %}
+    </div>
+	{% endblock %}

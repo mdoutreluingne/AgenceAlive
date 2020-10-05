@@ -52,7 +52,6 @@ class AdminPropertyController extends AbstractController
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
 
-
         //Ajoute données dans la bdd
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();

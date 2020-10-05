@@ -67,6 +67,20 @@ class PropertyRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * Retourne 4 biens
+     */
+    public function findPropertyByUser($id)
+    {
+        $sql = "select property.id, property.title from property "
+            . "Join user on user.id = property.users_id "
+            . "where property.users_id = " . $id;
+
+        $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
+        $stmt->execute(array());
+        return $stmt->fetchAll();
+    }
+
     private function findVisibleQuery(): QueryBuilder
     {
         return $this->createQueryBuilder('p')
