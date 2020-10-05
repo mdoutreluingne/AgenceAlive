@@ -68,13 +68,14 @@ class PropertyRepository extends ServiceEntityRepository
     }
 
     /**
-     * Retourne 4 biens
+     * Retourne les biens en fonction de l'id du user
      */
     public function findPropertyByUser($id)
     {
         $sql = "select property.id, property.title from property "
             . "Join user on user.id = property.users_id "
-            . "where property.users_id = " . $id;
+            . "where property.users_id = " . $id . " "
+            . "order by property.created DESC";
 
         $stmt = $this->getEntityManager()->getConnection()->prepare($sql);
         $stmt->execute(array());

@@ -4,6 +4,7 @@ namespace App\Controller\Dashboard;
 
 use App\Entity\Property;
 use App\Form\PropertyType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -11,6 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DashboardPropertyController extends AbstractController
 {
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
+
     /**
      * @Route("/dashboard/property", name="dashboard.property.index")
      */
@@ -37,9 +45,8 @@ class DashboardPropertyController extends AbstractController
         //Ajoute données dans la bdd
         if ($form->isSubmitted() && $form->isValid()) {
             $property->setUsers($user);
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($property);
-            $entityManager->flush();
+            $this->em->persist($property);
+            $this->em->flush();
             $this->addFlash('success', 'Bien créé avec success');
             return $this->redirectToRoute('dashboard.property.index');
         }
