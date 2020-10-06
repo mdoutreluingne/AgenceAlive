@@ -57,7 +57,7 @@ class ExceptionSubscriber implements EventSubscriberInterface
                     break;
             }
         } else {
-            $this->logger->info($exception->getMessage());
+            $this->logger->warning($exception->getMessage());
         }
         
         
