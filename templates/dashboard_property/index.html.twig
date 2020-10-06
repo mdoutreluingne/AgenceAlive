@@ -4,9 +4,11 @@
 
 {% block body %}
 
-<div class="container mt-4">
+<div class="container-fluid text-center">
+    <h2>Bienvenu sur votre dashboard, {{ user.username }}</h2>
+</div>
 
-        <h1>Gérer les biens</h1>
+<div class="container mt-4">
 
         {% for message in app.flashes('success') %}
             <div class="alert alert-success">
@@ -14,9 +16,15 @@
             </div>
         {% endfor %}
 
+        {% for emailVerify in app.flashes('email_no_verify') %}
+            <div class="alert alert-danger" role="alert">{{ emailVerify }}</div>
+        {% endfor %}
+
         {% for flashError in app.flashes('verify_email_error') %}
             <div class="alert alert-danger" role="alert">{{ flashError }}</div>
         {% endfor %}
+
+    <h3>Gérer vos biens</h3>
 
     <table class="table table-striped">
             <thead>

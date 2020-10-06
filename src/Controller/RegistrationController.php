@@ -85,11 +85,11 @@ class RegistrationController extends AbstractController
         } catch (VerifyEmailExceptionInterface $exception) {
             $this->addFlash('verify_email_error', $exception->getReason());
 
-            return $this->redirectToRoute('dashboard.property');
+            return $this->redirectToRoute('dashboard.property.index');
         }
 
         $this->addFlash('success', 'Votre adresse e-mail a été vérifiée.');
 
-        return $this->redirectToRoute('dashboard.property');
+        return $this->redirectToRoute('dashboard.property.index');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Dashboard;
 
+use App\Entity\User;
 use App\Entity\Property;
 use App\Form\PropertyType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -27,9 +28,16 @@ class DashboardPropertyController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Property::class);
         $propertiesByUser = $repository->findPropertyByUser($user->getId());
 
-        //dd($propertiesByUser);
+        $check_email_verify = $this->getDoctrine()->getRepository(User::class)->findOneById($user->getId());
+
+        //Check if the user's email has been validated
+        if ($check_email_verify->isVerified() == false) {
+           $this->addFlash("email_no_verify", "Votre email n'a pas encore été vérifiée");
+        }
+
         return $this->render('dashboard_property/index.html.twig', [
             'properties' => $propertiesByUser,
+            'user' => $user
         ]);
     }
 
@@ -42,7 +50,7 @@ class DashboardPropertyController extends AbstractController
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
 
-        //Ajoute données dans la bdd
+        //Add data in database
         if ($form->isSubmitted() && $form->isValid()) {
             $property->setUsers($user);
             $this->em->persist($property);
@@ -65,7 +73,7 @@ class DashboardPropertyController extends AbstractController
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
 
-        //Change les données dans la bdd
+        //Change the datas in the database
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($property);
             $this->em->flush();
