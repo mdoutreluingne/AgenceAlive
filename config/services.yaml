@@ -4,6 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    maintenanceFilePath: '%kernel.project_dir%/public/.maintenance'
 
 services:
     # default configuration for services in *this* file
@@ -33,4 +34,11 @@ services:
         class: App\Service\DbProcessor
         tags:
             - { name: monolog.processor, handler: dbHandler }
+
+    App\EventListener\MaintenanceListener:
+        arguments:
+            - '%maintenanceFilePath%'
+            - '@twig'
+        tags: 
+            - { name: kernel.event_listener, event: kernel.request }
     
