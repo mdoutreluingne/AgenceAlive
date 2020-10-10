@@ -1,4 +1,11 @@
 language: php
+sudo: false
+cache:
+    directories:
+        - $HOME/.composer/cache
+        - $HOME/symfony-bridge/.phpunit
+warnings_are_errors: false
+
 php:
   - '7.4'
 
