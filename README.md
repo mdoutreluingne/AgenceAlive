@@ -1,6 +1,7 @@
 # Agence alive
 
 [![Build Status](https://travis-ci.com/mdoutreluingne/AgenceAlive.svg?branch=master)](https://travis-ci.com/mdoutreluingne/AgenceAlive)
+[![GitHub license](https://img.shields.io/github/license/mdoutreluingne/AgenceAlive)](https://github.com/mdoutreluingne/AgenceAlive/blob/master/LICENSE)
 
 # Instructions d'installation :
 + Clonez ou téléchargez le contenu du dépôt GitHub : git clone https://github.com/mdoutreluingne/AgenceAlive.git
