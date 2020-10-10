@@ -9,11 +9,11 @@ class RegistrationControllerTest extends WebTestCase
     public function testAddNewUser()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/');
+        $crawler = $client->request('GET', '/register');
 
         //Clique sur le lien S'inscrire de la homepage
-        $link = $crawler->selectLink("S'inscrire")->link();
-        $crawler = $client->click($link);
+        /*$link = $crawler->selectLink("S'inscrire")->link();
+        $crawler = $client->click($link);*/
 
         //Remplie les champs du formulaire
         $form = $crawler->selectButton('Valider')->form();
