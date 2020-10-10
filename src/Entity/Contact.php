@@ -196,5 +196,6 @@ class Contact {
 
         return $this;
     }
+
 }
 ?>
