@@ -1,5 +1,7 @@
 # Agence alive
 
+https://travis-ci.com/mdoutreluingne/AgenceAlive.svg?branch=master
+
 # Instructions d'installation :
 + Clonez ou téléchargez le contenu du dépôt GitHub : git clone https://github.com/mdoutreluingne/AgenceAlive.git
 + Editez le fichier situé à la racine intitulé ".env" afin de remplacer les valeurs de paramétrage de la base de données.
