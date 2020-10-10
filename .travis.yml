@@ -2,10 +2,6 @@ language: php
 php:
   - '7.4'
 
-env:
-  - DATABASE_URL=mysql://root:@127.0.0.1:3306/symfony
-  - MAILER_DSN=smtp://localhost:1025
-
 services:
   - mysql
 
