@@ -3,18 +3,15 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\Panther\PantherTestCase;
-use Symfony\Component\Panther\ServerExtension;
 
-class HomeControllerTest extends PantherTestCase
+class HomeControllerTest extends WebTestCase
 {
-
-    public function testMyApp(): void
+    public function testHomePage()
     {
-        $client = static::createPantherClient(); // Your app is automatically started using the built-in web server
-        $client->request('GET', '/');
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/');
 
-        // Use any PHPUnit assertion, including the ones provided by Symfony
-        $this->assertPageTitleContains('Agence alive');
+        $this->assertSame(1, $crawler->filter('html:contains("Agence alive")')->count());
+
     }
 }
