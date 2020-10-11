@@ -6,6 +6,9 @@ php:
 services:
   - mysql
 
+addons:
+  chrome: stable
+
 install:
     - composer install --prefer-dist --no-interaction
     - php bin/console doctrine:database:create --env=test
