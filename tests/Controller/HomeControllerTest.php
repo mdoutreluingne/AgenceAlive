@@ -11,19 +11,18 @@ class HomeControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $client->request('GET', '/');
-        $this->assertResponseStatusCodeSame(Response::HTTP_OK);
 
-        //$this->assertSame(200, $client->getResponse()->getStatusCode());
+        $this->assertSame(200, $client->getResponse()->getStatusCode());
 
         //echo $client->getResponse()->getContent();
     }
 
-    /*public function testHomePage()
+    public function testHomePage()
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/');
 
         $this->assertSame(1, $crawler->filter('html:contains("Agence alive")')->count());
 
-    }*/
+    }
 }
