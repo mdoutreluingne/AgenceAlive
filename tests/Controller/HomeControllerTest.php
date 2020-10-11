@@ -9,12 +9,12 @@ use Symfony\Component\Panther\ServerExtension;
 class HomeControllerTest extends PantherTestCase
 {
 
-    public function testHomePage()
+    public function testMyApp(): void
     {
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/');
+        $client = static::createPantherClient(); // Your app is automatically started using the built-in web server
+        $client->request('GET', '/');
 
-        $this->assertSame(1, $crawler->filter('html:contains("Agence alive")')->count());
-
+        // Use any PHPUnit assertion, including the ones provided by Symfony
+        $this->assertPageTitleContains('Agence alive');
     }
 }
