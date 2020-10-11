@@ -5,9 +5,12 @@ namespace App\Tests\Controller;
 use Monolog\Handler\Handler;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class HomeControllerTest extends WebTestCase
 {
+    use RefreshDatabase;
+
     protected function disableExceptionHandling()
     {
         $this->oldExceptionHandler = $this->app->make(ExceptionHandler::class);
@@ -28,7 +31,7 @@ class HomeControllerTest extends WebTestCase
     
     public function testHomePageIsUp()
     {
-        $this->disableExceptionHandling();
+        
         $client = static::createClient();
         $client->request('GET', '/');
 
@@ -39,7 +42,6 @@ class HomeControllerTest extends WebTestCase
 
     public function testHomePage()
     {
-        $this->disableExceptionHandling();
         $client = static::createClient();
         $crawler = $client->request('GET', '/');
 
