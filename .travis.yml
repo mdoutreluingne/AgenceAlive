@@ -8,8 +8,8 @@ services:
 
 install:
   - composer install --no-interaction
-  - ./bin/console doctrine:database:create --env=travis
-  - ./bin/console doctrine:migration:migrate --env=travis --no-interaction
+  - ./bin/console doctrine:database:create --env=test
+  - ./bin/console doctrine:migration:migrate --env=test --no-interaction
 
 script:
   - ./vendor/bin/simple-phpunit
