@@ -3,13 +3,5 @@ language: php
 php:
   - "7.4"
 
-services:
-  - mysql
-
-install:
-  - composer install --no-interaction
-  - php bin/console doctrine:database:create --env=test
-  - php bin/console doctrine:migration:migrate --env=test --no-interaction
-
 script:
-  - ./vendor/bin/simple-phpunit
+  - vendor/bin/phpunit
