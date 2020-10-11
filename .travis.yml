@@ -2,6 +2,13 @@ language: php
 php:
   - '7.4'
 
+services:
+  - mysql
+
 script:
-   - composer install
-   - vendor/bin/phpunit
+  - composer install
+  - composer install --prefer-dist --no-interaction
+  - php bin/console doctrine:database:create --env=test
+  - php bin/console doctrine:schema:update --force --env=test
+  - php bin/console doctrine:fixtures:load -n --env=test
+  - vendor/bin/phpunit
