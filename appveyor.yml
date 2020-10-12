@@ -22,5 +22,5 @@ install:
   - php composer.phar install --prefer-source --no-interaction
 
 test_script:
-  - cd C:\projects\phpmd
+  - cd C:\projects\AgenceAlive
   - vendor\bin\phpunit.bat
