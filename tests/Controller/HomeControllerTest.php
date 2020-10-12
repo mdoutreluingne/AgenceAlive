@@ -2,40 +2,18 @@
 
 namespace App\Tests\Controller;
 
-use Monolog\Handler\Handler;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Symfony\Component\HttpFoundation\Response;
 
 class HomeControllerTest extends WebTestCase
 {
-    use RefreshDatabase;
-
-    protected function disableExceptionHandling()
-    {
-        $this->oldExceptionHandler = $this->app->make(ExceptionHandler::class);
-        $this->app->instance(ExceptionHandler::class, new class extends Handler
-        {
-            public function __construct()
-            {
-            }
-            public function report(\Exception $e)
-            {
-            }
-            public function render($request, \Exception $e)
-            {
-                throw $e;
-            }
-        });
-    }
-    
     public function testHomePageIsUp()
     {
-        
         $client = static::createClient();
         $client->request('GET', '/');
 
-        $this->assertSame(200, $client->getResponse()->getStatusCode());
+        //$this->assertSame(200, $client->getResponse()->getStatusCode());
+        $this->assertResponseStatusCodeSame(200);
 
         //echo $client->getResponse()->getContent();
     }

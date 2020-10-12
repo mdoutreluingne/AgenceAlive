@@ -8,7 +8,6 @@ class Contact {
     /**
      *
      * @var string|null
-     * @Assert\NotBlank
      * @Assert\Length(min=2, max=100)
      */
     private $firstname;
@@ -16,7 +15,6 @@ class Contact {
     /**
      *
      * @var string|null
-     * @Assert\NotBlank
      * @Assert\Length(min=2, max=100)
      */
     private $lastname;
@@ -42,7 +40,6 @@ class Contact {
     /**
      *
      * @var string|null
-     * @Assert\NotBlank
      * @Assert\Length(min=10)
      */
     private $message;
