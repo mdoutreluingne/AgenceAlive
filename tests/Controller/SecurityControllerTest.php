@@ -46,7 +46,8 @@ class SecurityControllerTest extends WebTestCase
         $client->submit($form);
         //Redige après la soumission du formulaire
         $crawler = $client->followRedirect();
-        $this->assertSelectorExists('.alert.alert-danger'); //Message de l'email de vérification après le login
+        
+        $this->assertSelectorTextContains('h3', 'Gérer vos biens');
         $this->assertResponseStatusCodeSame(200);
     }
 
