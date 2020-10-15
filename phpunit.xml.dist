@@ -21,4 +21,17 @@
   <listeners>
     <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
   </listeners>
+  <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./doc</directory>
+                <directory>./SampleApp_RoadPlanner/</directory>
+            </exclude>
+        </whitelist>
+  </filter>
+  <logging>
+      <log type="coverage-clover" target="build/logs/clover.xml"/>
+  </logging>
 </phpunit>
