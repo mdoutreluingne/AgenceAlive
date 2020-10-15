@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.com/mdoutreluingne/AgenceAlive.svg?branch=master)](https://travis-ci.com/mdoutreluingne/AgenceAlive)
 [![GitHub license](https://img.shields.io/github/license/mdoutreluingne/AgenceAlive)](https://github.com/mdoutreluingne/AgenceAlive/blob/master/LICENSE)
 
+[![Coverage Status](https://coveralls.io/repos/github/mdoutreluingne/AgenceAlive/badge.svg?branch=master)](https://coveralls.io/github/mdoutreluingne/AgenceAlive?branch=master)
+
 # Instructions d'installation :
 + Clonez ou téléchargez le contenu du dépôt GitHub : git clone https://github.com/mdoutreluingne/AgenceAlive.git
 + Editez le fichier situé à la racine intitulé ".env" afin de remplacer les valeurs de paramétrage de la base de données.

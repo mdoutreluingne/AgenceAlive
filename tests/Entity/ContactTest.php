@@ -12,10 +12,10 @@ class ContactTest extends KernelTestCase
     public function getEntity(): Contact
     {
         return (new Contact())
-            ->setFirstname("cartman")
+            ->setFirstname("Cartman")
             ->setLastname("Eric")
             ->setPhone("0450226027")
-            ->setEmail("cartmen.eric@gmail.com")
+            ->setEmail("cartman.eric@gmail.com")
             ->setMessage("ccccccccccccccccccccc")
             ->setProperty(new Property());
     }
