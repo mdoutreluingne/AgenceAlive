@@ -2,12 +2,12 @@ language: php
 php:
   - '7.4'
 
-services:
-  - mysql
+before_script:
+  - composer install
 
 script:
-  - composer install --prefer-dist --no-interaction
-  - php bin/console doctrine:database:create --env=test
-  - php bin/console doctrine:schema:update --force --env=test
-  - php bin/console doctrine:fixtures:load -n --env=test
-  - vendor/bin/phpunit
+- mkdir -p build/logs 
+- vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+  - vendor/bin/coveralls -v
