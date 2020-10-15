@@ -15,7 +15,10 @@
   </php>
   <testsuites>
     <testsuite name="unit">
-      <directory suffix="Test.php">./tests</directory>
+      <directory suffix="Test.php">./tests/Entity</directory>
+    </testsuite>
+    <testsuite name="fonctional">
+      <directory suffix="Test.php">./tests/Controller</directory>
     </testsuite>
   </testsuites>
   <listeners>
