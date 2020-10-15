@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/mdoutreluingne/AgenceAlive.svg?branch=master)](https://travis-ci.com/mdoutreluingne/AgenceAlive)
 [![GitHub license](https://img.shields.io/github/license/mdoutreluingne/AgenceAlive)](https://github.com/mdoutreluingne/AgenceAlive/blob/master/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a72f6316de51b3bbfae9/maintainability)](https://codeclimate.com/github/mdoutreluingne/AgenceAlive/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a72f6316de51b3bbfae9/test_coverage)](https://codeclimate.com/github/mdoutreluingne/AgenceAlive/test_coverage)
 
 
 # Instructions d'installation :
