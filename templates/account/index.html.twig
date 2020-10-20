@@ -8,6 +8,11 @@
     <div class="col-12"><h1>Votre profile</h1></div>
   </div>
   <hr class="text-body">
+  {% for success in app.flashes('success') %}
+    <div class="alert alert-success" role="alert">
+      {{ success }}
+    </div>
+  {% endfor %}
   <div class="row">
     <div class="col-2">Username :</div>
     <div class="col-10">{{ app.user.username }}</div>
@@ -16,8 +21,8 @@
   </div>
   <div class="row">
     <div class="col-4">
-        <a href="#" class="btn btn-primary">Modifier le profil</a>
-        <a href="#" class="btn btn-primary">Modifier le mot de passe</a>
+        <a href="{{ path('account_edit_profile') }}" class="btn btn-primary">Modifier le profil</a>
+        <a href="{{ path('account_edit_pass') }}" class="btn btn-primary">Modifier le mot de passe</a>
     </div>
   </div>
 </div>

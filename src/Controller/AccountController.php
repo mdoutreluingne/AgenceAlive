@@ -6,6 +6,8 @@ use App\Form\EditAccountType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authenticator\Passport\UserPassportInterface;
 
 class AccountController extends AbstractController
 {
@@ -20,9 +22,9 @@ class AccountController extends AbstractController
     }
 
     /**
-     * @Route("/account/edit", name="account_edit")
+     * @Route("/account/edit/profile", name="account_edit_profile")
      */
-    public function edit(Request $request)
+    public function editProfile(Request $request)
     {
         $user = $this->getUser();
         $form = $this->createForm(EditAccountType::class, $user);
@@ -33,11 +35,37 @@ class AccountController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $this->addFlash('message', 'Profil mis à jour');
+            $this->addFlash('success', 'Profil mis à jour');
             return $this->redirectToRoute('account');
         }
+
         return $this->render('account/editaccount.html.twig', [
-            'controller_name' => 'AccountController',
+            'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/account/edit/pass", name="account_edit_pass")
+     */
+    public function editPass(Request $request, UserPasswordEncoderInterface $encoder)
+    {
+        if ($request->isMethod('POST')) {
+            $em = $this->getDoctrine()->getManager();
+
+            $user = $this->getUser();
+            //On vérifie si les deux mot de passe sont identiques
+            if ($request->request->get('pass') == $request->request->get('pass2')) {
+                $user->setPassword($encoder->encodePassword($user, $request->request->get('pass')));
+                $em->flush();
+                $this->addFlash('success', 'Mot de passe mis à jour avec succès');
+
+                return $this->redirectToRoute('account');
+            }
+            else{
+                $this->addFlash('error', 'Les deux mot de passe ne sont pas identiques');
+            }
+        }
+
+        return $this->render('account/editpassword.html.twig');
     }
 }
