@@ -22,6 +22,16 @@ class PropertyRepository extends ServiceEntityRepository
         parent::__construct($registry, Property::class);
     }
 
+    public function countForUser(int $user_id): int
+    {
+        return $this->createQueryBuilder('p')
+            ->select('COUNT(p.id)')
+            ->where('p.users = :user')
+            ->setParameter('user', $user_id)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
     /**
      *
      * @return Query

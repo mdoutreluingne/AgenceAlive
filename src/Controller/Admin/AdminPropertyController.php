@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Option;
 use App\Entity\Property;
 use App\Form\PropertyType;
+use App\Manager\BadgeManager;
 use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityManager;
@@ -20,16 +21,24 @@ class AdminPropertyController extends AbstractController
      * @var PropertyRepository
      */
     private $repository;
+
     /**
      *
      * @var EntityManagerInterface
      */
     private $em;
 
-    public function __construct(PropertyRepository $repository, EntityManagerInterface $em)
+    /**
+     *
+     * @var BadgeManager
+     */
+    private $badge_manager;
+
+    public function __construct(PropertyRepository $repository, EntityManagerInterface $em, BadgeManager $badge_manager)
     {
         $this->repository = $repository;
         $this->em = $em;
+        $this->badge_manager = $badge_manager;
     }
 
     /**
@@ -49,21 +58,32 @@ class AdminPropertyController extends AbstractController
     public function new(Request $request)
     {
         $property = new Property();
+        $property->setUsers($this->getUser());
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
 
         //Ajoute données dans la bdd
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($property);
-            $entityManager->flush();
+            
+            $this->em->persist($property);
+            $this->em->getConnection()->beginTransaction();
+            $this->em->flush();
+
+            //Déblocage du badge
+            $property_count = $this->em->getRepository(Property::class)->countForUser($this->getUser()->getId());
+            $this->badge_manager->checkAndUnlock($this->getUser(), 'property', $property_count);
+            $this->em->getConnection()->commit();
+
             $this->addFlash('success', 'Bien créé avec success');
             return $this->redirectToRoute('admin.property.index');
         }
+
+        $badges = $this->badge_manager->getBadgeFor($this->getUser());
         
         return $this->render('admin_property/new.html.twig', [
             'property' => $property,
             'form' => $form->createView(),
+            'badges' => $badges
         ]);
     }
 

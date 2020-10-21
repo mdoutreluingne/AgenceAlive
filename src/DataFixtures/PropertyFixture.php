@@ -14,7 +14,7 @@ class PropertyFixture extends Fixture
     //Ajoute des biens
     public function load(ObjectManager $manager)
     {
-        $faker = Factory::create('fr_FR');
+        /*$faker = Factory::create('fr_FR');
         for ($i=0; $i < 100; $i++) { 
             $property = new Property();
             $property
@@ -36,6 +36,6 @@ class PropertyFixture extends Fixture
             $manager->persist($property);
         }
 
-        $manager->flush();
+        $manager->flush();*/
     }
 }
