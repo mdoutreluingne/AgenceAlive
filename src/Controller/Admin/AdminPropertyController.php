@@ -77,13 +77,10 @@ class AdminPropertyController extends AbstractController
             $this->addFlash('success', 'Bien créé avec success');
             return $this->redirectToRoute('admin.property.index');
         }
-
-        $badges = $this->badge_manager->getBadgeFor($this->getUser());
         
         return $this->render('admin_property/new.html.twig', [
             'property' => $property,
-            'form' => $form->createView(),
-            'badges' => $badges
+            'form' => $form->createView()
         ]);
     }
 

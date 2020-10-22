@@ -79,12 +79,9 @@ class DashboardPropertyController extends AbstractController
             return $this->redirectToRoute('dashboard.property.index');
         }
 
-        $badges = $this->badge_manager->getBadgeFor($this->getUser());
-
         return $this->render('dashboard_property/new.html.twig', [
             'property' => $property,
-            'form' => $form->createView(),
-            'badges' => $badges
+            'form' => $form->createView()
         ]);
     }
 

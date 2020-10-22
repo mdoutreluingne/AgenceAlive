@@ -3,21 +3,35 @@
 namespace App\Controller;
 
 use App\Form\EditAccountType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Manager\BadgeManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authenticator\Passport\UserPassportInterface;
 
 class AccountController extends AbstractController
 {
     /**
+     *
+     * @var BadgeManager
+     */
+    private $badge_manager;
+
+    public function __construct(BadgeManager $badge_manager)
+    {
+        $this->badge_manager = $badge_manager;
+    }
+
+    /**
      * @Route("/account", name="account")
      */
     public function index()
     {
+        $badges = $this->badge_manager->getBadgeFor($this->getUser());
+
         return $this->render('account/index.html.twig', [
-            'controller_name' => 'AccountController',
+            'badges' => $badges
         ]);
     }
 

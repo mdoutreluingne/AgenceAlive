@@ -17,6 +17,13 @@ class LoadBadgeData extends Fixture
         $badge->setActionName('property');
 
         $manager->persist($badge);
+
+        $badge = new Badge();
+        $badge->setName('débutant');
+        $badge->setActionCount(2);
+        $badge->setActionName('property');
+
+        $manager->persist($badge);
         $manager->flush();
     }
 }
