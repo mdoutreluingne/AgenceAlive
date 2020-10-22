@@ -24,7 +24,7 @@ jobs:
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo apt install zlib1g-dev
       - run: sudo apt install libsqlite3-dev
-      - run: sudo php -m
+      - run: sudo php -v
       - run: sudo apt-get install php-xsl
       - run: sudo docker-php-ext-install zip
       
