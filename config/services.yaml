@@ -42,3 +42,8 @@ services:
         tags: 
             - { name: kernel.event_listener, event: kernel.request }
     
+    app.badge_subscriber:
+        class: App\EventSubscriber\BadgeSubscriber
+        tags:
+            - { name: kernel.event_subscriber}
+    

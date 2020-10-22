@@ -6,13 +6,15 @@ use App\Entity\Option;
 use App\Entity\Property;
 use App\Form\PropertyType;
 use App\Manager\BadgeManager;
+use Doctrine\ORM\EntityManager;
+use App\Event\PropertyCreatedEvent;
 use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class AdminPropertyController extends AbstractController
 {
@@ -30,15 +32,15 @@ class AdminPropertyController extends AbstractController
 
     /**
      *
-     * @var BadgeManager
+     * @var EventDispatcherInterface
      */
-    private $badge_manager;
+    private $eventDispatcher;
 
-    public function __construct(PropertyRepository $repository, EntityManagerInterface $em, BadgeManager $badge_manager)
+    public function __construct(PropertyRepository $repository, EntityManagerInterface $em, EventDispatcherInterface $eventDispatcher = null)
     {
         $this->repository = $repository;
         $this->em = $em;
-        $this->badge_manager = $badge_manager;
+        $this->eventDispatcher = $eventDispatcher;
     }
 
     /**
@@ -70,8 +72,8 @@ class AdminPropertyController extends AbstractController
             $this->em->flush();
 
             //Déblocage du badge
-            $property_count = $this->em->getRepository(Property::class)->countForUser($this->getUser()->getId());
-            $this->badge_manager->checkAndUnlock($this->getUser(), 'property', $property_count);
+            $this->eventDispatcher->dispatch(new PropertyCreatedEvent($property), PropertyCreatedEvent::NAME);
+            
             $this->em->getConnection()->commit();
 
             $this->addFlash('success', 'Bien créé avec success');

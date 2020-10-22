@@ -5,8 +5,10 @@ namespace App\Manager;
 use App\Entity\Badge;
 use App\Entity\User;
 use App\Entity\BadgeUnlock;
+use App\Event\BadgeUnlockedEvent;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\NoResultException;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class BadgeManager
 {
@@ -17,9 +19,16 @@ class BadgeManager
      */
     private $em;
 
-    public function __construct(EntityManagerInterface $em)
+    /**
+     *
+     * @var EventDispatcherInterface
+     */
+    private $dispatcher;
+
+    public function __construct(EntityManagerInterface $em, EventDispatcherInterface $dispatcher)
     {
         $this->em = $em;
+        $this->dispatcher = $dispatcher;
     }
 
     /**
@@ -46,6 +55,7 @@ class BadgeManager
                 $this->em->flush();
 
                 //Emmetre un événement pour informer l'application du déblocage du badge
+                $this->dispatcher->dispatch(new BadgeUnlockedEvent($unlock), BadgeUnlockedEvent::NAME);
             }
 
         } catch (NoResultException $e) {

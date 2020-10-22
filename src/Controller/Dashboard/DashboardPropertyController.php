@@ -4,13 +4,14 @@ namespace App\Controller\Dashboard;
 
 use App\Entity\User;
 use App\Entity\Property;
+use App\Event\PropertyCreatedEvent;
 use App\Form\PropertyType;
-use App\Manager\BadgeManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class DashboardPropertyController extends AbstractController
 {
@@ -22,14 +23,14 @@ class DashboardPropertyController extends AbstractController
 
     /**
      *
-     * @var BadgeManager
+     * @var EventDispatcherInterface
      */
-    private $badge_manager;
+    private $eventDispatcher;
 
-    public function __construct(EntityManagerInterface $em, BadgeManager $badge_manager)
+    public function __construct(EntityManagerInterface $em, EventDispatcherInterface $eventDispatcher = null)
     {
         $this->em = $em;
-        $this->badge_manager = $badge_manager;
+        $this->eventDispatcher = $eventDispatcher;
     }
 
     /**
@@ -71,8 +72,8 @@ class DashboardPropertyController extends AbstractController
             $this->em->flush();
 
             //Déblocage du badge
-            $property_count = $this->em->getRepository(Property::class)->countForUser($this->getUser()->getId());
-            $this->badge_manager->checkAndUnlock($this->getUser(), 'property', $property_count);
+            $this->eventDispatcher->dispatch(new PropertyCreatedEvent($property), PropertyCreatedEvent::NAME);   
+            
             $this->em->getConnection()->commit();
 
             $this->addFlash('success', 'Bien créé avec success');
