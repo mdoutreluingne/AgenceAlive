@@ -15,6 +15,7 @@ class LoadBadgeData extends Fixture
         $badge->setName('timide');
         $badge->setActionCount(1);
         $badge->setActionName('property');
+        $badge->setFilename("timide.jpg");
 
         $manager->persist($badge);
 
@@ -22,6 +23,7 @@ class LoadBadgeData extends Fixture
         $badge->setName('débutant');
         $badge->setActionCount(2);
         $badge->setActionName('property');
+        $badge->setFilename("debutant.jpg");
 
         $manager->persist($badge);
         $manager->flush();

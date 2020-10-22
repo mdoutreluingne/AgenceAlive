@@ -49,7 +49,7 @@ class BadgeManager
             }
 
         } catch (NoResultException $e) {
-            //throw $th;
+            throw $e;
         }       
         
     }

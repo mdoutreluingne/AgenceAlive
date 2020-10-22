@@ -5,13 +5,15 @@
 {% block body %}
 <div class="container">
   <div class="row">
-    <div class="col-12"><h1>Votre profile</h1></div>
+    <div class="col-12">
+      <h1>Votre profile</h1>
+    </div>
   </div>
   <hr class="text-body">
   {% for success in app.flashes('success') %}
-    <div class="alert alert-success" role="alert">
-      {{ success }}
-    </div>
+  <div class="alert alert-success" role="alert">
+    {{ success }}
+  </div>
   {% endfor %}
   <div class="row">
     <div class="col-2">Username :</div>
@@ -21,23 +23,25 @@
   </div>
   <div class="row">
     <div class="col-4">
-        <a href="{{ path('account_edit_profile') }}" class="btn btn-primary">Modifier le profil</a>
-        <a href="{{ path('account_edit_pass') }}" class="btn btn-primary">Modifier le mot de passe</a>
+      <a href="{{ path('account_edit_profile') }}" class="btn btn-primary">Modifier le profil</a>
+      <a href="{{ path('account_edit_pass') }}" class="btn btn-primary">Modifier le mot de passe</a>
     </div>
   </div>
   <div class="row">
-  	<div class="col-md-4">
-  	  <h2>Mes badges</h2>
-  	  {% if badges is empty %}
-  	  Vous n'avez pas encore de badge
-  	  {% else %}
-  	  <ul class="list-group">
-  	    {% for badge in badges %}
-  	    <li class="list-group-item">{{ badge.name }}</li>
-  	    {% endfor %}
-  	  </ul>
-  	  {% endif %}
-  	</div>
+    <div class="col-12">
+      <h1>Mes badges</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      {% if badges is empty %}
+      Vous n'avez pas encore de badge
+      {% else %}
+      {% for badge in badges %}
+        <img src="{{ asset('build/badges/' ~ badge.filename) }}" title="{{ badge.name }}" alt="{{ badge.name }}">
+      {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </div>
 {% endblock %}
