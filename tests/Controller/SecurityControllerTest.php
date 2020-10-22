@@ -2,10 +2,7 @@
 
 namespace App\Tests;
 
-use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\BrowserKit\Cookie;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class SecurityControllerTest extends WebTestCase
 {
@@ -50,5 +47,4 @@ class SecurityControllerTest extends WebTestCase
         $this->assertSelectorTextContains('h3', 'Gérer vos biens');
         $this->assertResponseStatusCodeSame(200);
     }
-
 }
