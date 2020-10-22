@@ -25,7 +25,7 @@ jobs:
       - run: sudo apt install zlib1g-dev
       - run: sudo apt install libsqlite3-dev
       - run: sudo apt-get install -y libzip-dev
-      - run: sudo apt-get install php-xsl
+      - run: sudo apt-get install libxslt-dev
       - run: sudo docker-php-ext-install zip
       
 
