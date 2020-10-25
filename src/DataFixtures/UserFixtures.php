@@ -23,14 +23,17 @@ class UserFixtures extends Fixture
         $user->setRoles(array('ROLE_ADMIN'));
         $user->setPassword($this->passwordEncoder->encodePassword($user, 'adminadmin'));
         $user->setEmail("maxime.doutreluingne@sfr.fr");
+        $user->setIsVerified(true);
         $manager->persist($user);
 
+        $user = new User();
         $user->setUsername('test');
         $user->setRoles(array('ROLE_USER'));
         $user->setPassword($this->passwordEncoder->encodePassword($user, 'testtest'));
         $user->setEmail("test.test@sfr.fr");
-        $manager->persist($user);
+        $user->setIsVerified(true);
+        $manager->persist($user);*/
 
-        $manager->flush();*/
+        $manager->flush();
     }
 }

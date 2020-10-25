@@ -15,8 +15,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\BrowserKit\Request as BrowserKitRequest;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PropertyController extends AbstractController
 {
@@ -95,5 +95,45 @@ class PropertyController extends AbstractController
             'current_menu' => 'properties',
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/favoris/ajout/{id}", name="property.ajout.favoris")
+     * @return Response
+     */
+    public function addFavoris(Property $property): Response
+    {
+
+        if (!$property) {
+            throw new NotFoundHttpException('Pas de propriété trouvée');
+        }
+
+        $property->addFavori($this->getUser());
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($property);
+        $em->flush();
+
+        return $this->redirectToRoute('property.index');
+    }
+
+    /**
+     * @Route("/favoris/retrait/{id}", name="property.retrait.favoris")
+     * @return Response
+     */
+    public function RemoveFavoris(Property $property): Response
+    {
+
+        if (!$property) {
+            throw new NotFoundHttpException('Pas de propriété trouvée');
+        }
+
+        $property->removeFavori($this->getUser());
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($property);
+        $em->flush();
+
+        return $this->redirectToRoute('property.index');
     }
 }

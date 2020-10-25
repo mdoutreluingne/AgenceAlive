@@ -57,10 +57,16 @@ class User implements UserInterface
      */
     private $properties;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Property::class, mappedBy="favoris")
+     */
+    private $favoris;
+
     public function __construct()
     {
         $this->logs = new ArrayCollection();
         $this->properties = new ArrayCollection();
+        $this->favoris = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -223,6 +229,34 @@ class User implements UserInterface
             if ($property->getUsers() === $this) {
                 $property->setUsers(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Property[]
+     */
+    public function getFavoris(): Collection
+    {
+        return $this->favoris;
+    }
+
+    public function addFavori(Property $favori): self
+    {
+        if (!$this->favoris->contains($favori)) {
+            $this->favoris[] = $favori;
+            $favori->addFavori($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFavori(Property $favori): self
+    {
+        if ($this->favoris->contains($favori)) {
+            $this->favoris->removeElement($favori);
+            $favori->removeFavori($this);
         }
 
         return $this;

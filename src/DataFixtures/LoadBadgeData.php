@@ -11,7 +11,7 @@ class LoadBadgeData extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $badge = new Badge();
+       /* $badge = new Badge();
         $badge->setName('timide');
         $badge->setActionCount(1);
         $badge->setActionName('property');
@@ -26,6 +26,6 @@ class LoadBadgeData extends Fixture
         $badge->setFilename("debutant.jpg");
 
         $manager->persist($badge);
-        $manager->flush();
+        $manager->flush();*/
     }
 }

@@ -41,6 +41,9 @@
 									<li class="nav-item">
                                     	<a class="nav-link {% if current_menu is defined and current_menu == 'logs'%}active{%endif%}" href="{{ path('dashboard.property.index') }}">Mes biens</a>
                                 	</li>
+									<li class="nav-item">
+										<a class="nav-link {% if current_menu is defined and current_menu == 'logs'%}active{%endif%}" href="{{ path('favoris_property') }}">Mes favoris</a>
+									</li>
 								{% endif %}
                             </ul>
 							{% if not app.user %}

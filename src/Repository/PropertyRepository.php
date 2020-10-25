@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Property;
 use App\Entity\PropertyFilter;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
@@ -75,6 +76,20 @@ class PropertyRepository extends ServiceEntityRepository
             ->setMaxResults(4)
             ->getQuery()
             ->getResult();
+    }
+
+    /**
+     * Retourne 4 biens
+     */
+    public function findFavorisPropertyByUser(User $user)
+    {
+        return $this->createQueryBuilder('p')
+        ->select('p')
+        ->join('p.favoris', 'pf')
+        ->where('p.sold = false')
+        ->getQuery()
+        ->getResult();
+
     }
 
     /**

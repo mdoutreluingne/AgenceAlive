@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes favoris{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <h3>Mes favoris</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Surface</th>
+                <th scope="col">Ville</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for property in favorisProperties %}
+            <tr>
+                <td><a href="{{path('property.show', {id: property.id, slug: property.slug}) }}"}}>{{property.title}}</a></td>
+                <td>{{property.surface}} m²</td>
+                <td>{{property.city}} ({{property.postalcode}})</td>
+                <td>{{property.formatPrice}}€</td>
+                <td>
+                    {% if property.filename %}
+                    <img src="{{vich_uploader_asset(property, 'imageFile') | imagine_filter('thumb')}}">
+                    {% else %}
+                    <img src="{{'/images/properties/empty.jpg' | imagine_filter('thumb')}}">
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
