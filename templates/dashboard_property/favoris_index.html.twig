@@ -2,8 +2,14 @@
 
 {% block title %}Mes favoris{% endblock %}
 
-{% block body %}
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+{% endblock %}
 
+{% block body %}
 <div class="container mt-4">
     <h3>Mes favoris</h3>
 
@@ -30,6 +36,26 @@
                     {% else %}
                     <img src="{{'/images/properties/empty.jpg' | imagine_filter('thumb')}}">
                     {% endif %}
+                </td>
+                <td>
+                    <div class="text-danger">
+                        {% if is_granted("ROLE_USER") %}
+                            {% for favoris in property.favoris %}
+                                {% if favoris.id == app.user.id %}
+                                <a href="{{ path('property.retrait.favoris', {id: property.id}) }}" class="text-danger"><i
+                                        class="fas fa-heart"></i></a>
+                                {% else %}
+                                <a href="{{ path('property.ajout.favoris', {id: property.id}) }}" class="text-danger"><i
+                                        class="far fa-heart"></i></a>
+                                {% endif %}
+                                {% else %}
+                                <a href="{{ path('property.ajout.favoris', {id: property.id}) }}" class="text-danger"><i
+                                        class="far fa-heart"></i></a>
+                            {% endfor %}
+                        {% else %}
+                            <i class="far fa-heart"></i>
+                        {% endif %}
+                    </div>
                 </td>
             </tr>
             {% endfor %}
