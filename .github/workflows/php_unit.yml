@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,5 +12,5 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@17-php-versions
         with:
-          configuration: phpunit.xml
+          configuration: phpunit.xml.dist
           args: --coverage-text
