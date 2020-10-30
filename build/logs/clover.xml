@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603379600">
-  <project timestamp="1603379600">
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\AccountController.php">
+<coverage generated="1604076525">
+  <project timestamp="1604076525">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\AccountController.php">
       <class name="App\Controller\AccountController" namespace="global">
         <metrics complexity="8" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="30" coveredelements="0"/>
       </class>
@@ -37,7 +37,7 @@
       <line num="83" type="stmt" count="0"/>
       <metrics loc="85" ncloc="72" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="30" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\Admin\AdminLogController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\Admin\AdminLogController.php">
       <class name="App\Controller\Admin\AdminLogController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
       </class>
@@ -49,7 +49,7 @@
       <line num="22" type="stmt" count="0"/>
       <metrics loc="25" ncloc="22" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\Admin\AdminPropertyController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\Admin\AdminPropertyController.php">
       <class name="App\Controller\Admin\AdminPropertyController" namespace="global">
         <metrics complexity="10" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="0" elements="42" coveredelements="0"/>
       </class>
@@ -97,7 +97,7 @@
       <line num="122" type="stmt" count="0"/>
       <metrics loc="124" ncloc="100" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="0" elements="42" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\Admin\OptionController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\Admin\OptionController.php">
       <class name="App\Controller\Admin\OptionController" namespace="global">
         <metrics complexity="9" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="30" coveredelements="0"/>
       </class>
@@ -133,23 +133,23 @@
       <line num="82" type="stmt" count="0"/>
       <metrics loc="84" ncloc="69" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="30" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\Dashboard\DashboardPropertyController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\Dashboard\DashboardPropertyController.php">
       <class name="App\Controller\Dashboard\DashboardPropertyController" namespace="global">
-        <metrics complexity="11" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="0" elements="46" coveredelements="0"/>
+        <metrics complexity="11" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="11" elements="46" coveredelements="13"/>
       </class>
-      <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="39" type="method" name="index" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="47" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="51" type="stmt" count="0"/>
-      <line num="52" type="stmt" count="0"/>
-      <line num="53" type="stmt" count="0"/>
+      <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="32" type="stmt" count="2"/>
+      <line num="33" type="stmt" count="2"/>
+      <line num="34" type="stmt" count="2"/>
+      <line num="39" type="method" name="index" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="41" type="stmt" count="2"/>
+      <line num="42" type="stmt" count="2"/>
+      <line num="44" type="stmt" count="2"/>
+      <line num="47" type="stmt" count="2"/>
+      <line num="48" type="stmt" count="2"/>
+      <line num="51" type="stmt" count="2"/>
+      <line num="52" type="stmt" count="2"/>
+      <line num="53" type="stmt" count="2"/>
       <line num="60" type="method" name="new" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="62" type="stmt" count="0"/>
       <line num="63" type="stmt" count="0"/>
@@ -183,21 +183,32 @@
       <line num="119" type="stmt" count="0"/>
       <line num="120" type="stmt" count="0"/>
       <line num="122" type="stmt" count="0"/>
-      <metrics loc="124" ncloc="104" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="0" elements="46" coveredelements="0"/>
+      <metrics loc="124" ncloc="104" classes="1" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="11" elements="46" coveredelements="13"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\HomeController.php">
-      <class name="App\Controller\HomeController" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\Dashboard\FavorisPropertyController.php">
+      <class name="App\Controller\Dashboard\FavorisPropertyController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
       </class>
-      <line num="17" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="19" type="stmt" count="0"/>
+      <line num="15" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="17" type="stmt" count="0"/>
+      <line num="18" type="stmt" count="0"/>
       <line num="20" type="stmt" count="0"/>
       <line num="21" type="stmt" count="0"/>
-      <metrics loc="24" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      <metrics loc="24" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\PropertyController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\HomeController.php">
+      <class name="App\Controller\HomeController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </class>
+      <line num="17" type="method" name="index" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="19" type="stmt" count="3"/>
+      <line num="20" type="stmt" count="3"/>
+      <line num="21" type="stmt" count="3"/>
+      <metrics loc="24" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    </file>
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\PropertyController.php">
       <class name="App\Controller\PropertyController" namespace="global">
-        <metrics complexity="6" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="0" elements="35" coveredelements="0"/>
+        <metrics complexity="10" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="0" elements="51" coveredelements="0"/>
       </class>
       <line num="34" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="36" type="stmt" count="0"/>
@@ -234,39 +245,55 @@
       <line num="94" type="stmt" count="0"/>
       <line num="95" type="stmt" count="0"/>
       <line num="96" type="stmt" count="0"/>
-      <metrics loc="99" ncloc="81" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="0" elements="35" coveredelements="0"/>
+      <line num="104" type="method" name="addFavoris" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="107" type="stmt" count="0"/>
+      <line num="108" type="stmt" count="0"/>
+      <line num="111" type="stmt" count="0"/>
+      <line num="113" type="stmt" count="0"/>
+      <line num="114" type="stmt" count="0"/>
+      <line num="115" type="stmt" count="0"/>
+      <line num="117" type="stmt" count="0"/>
+      <line num="124" type="method" name="RemoveFavoris" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="127" type="stmt" count="0"/>
+      <line num="128" type="stmt" count="0"/>
+      <line num="131" type="stmt" count="0"/>
+      <line num="133" type="stmt" count="0"/>
+      <line num="134" type="stmt" count="0"/>
+      <line num="135" type="stmt" count="0"/>
+      <line num="137" type="stmt" count="0"/>
+      <metrics loc="139" ncloc="113" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="0" elements="51" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\RegistrationController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\RegistrationController.php">
       <class name="App\Controller\RegistrationController" namespace="global">
-        <metrics complexity="6" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="0" elements="35" coveredelements="0"/>
+        <metrics complexity="6" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="25" elements="35" coveredelements="27"/>
       </class>
-      <line num="23" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="31" type="method" name="register" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="46" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="49" type="stmt" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="54" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="62" type="stmt" count="0"/>
-      <line num="63" type="stmt" count="0"/>
-      <line num="66" type="stmt" count="0"/>
-      <line num="70" type="stmt" count="0"/>
-      <line num="71" type="stmt" count="0"/>
+      <line num="23" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="31" type="method" name="register" visibility="public" complexity="3" crap="3" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <line num="50" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="62" type="stmt" count="1"/>
+      <line num="63" type="stmt" count="1"/>
+      <line num="66" type="stmt" count="1"/>
+      <line num="70" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
       <line num="78" type="method" name="verifyUserEmail" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="80" type="stmt" count="0"/>
       <line num="84" type="stmt" count="0"/>
@@ -275,42 +302,29 @@
       <line num="88" type="stmt" count="0"/>
       <line num="91" type="stmt" count="0"/>
       <line num="93" type="stmt" count="0"/>
-      <metrics loc="95" ncloc="89" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="0" elements="35" coveredelements="0"/>
+      <metrics loc="95" ncloc="89" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="25" elements="35" coveredelements="27"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Controller\SecurityController.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Controller\SecurityController.php">
       <class name="App\Controller\SecurityController" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
       </class>
-      <line num="15" type="method" name="login" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
+      <line num="15" type="method" name="login" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="22" type="stmt" count="3"/>
+      <line num="24" type="stmt" count="3"/>
+      <line num="26" type="stmt" count="3"/>
       <line num="32" type="method" name="logout" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="34" type="stmt" count="0"/>
-      <metrics loc="36" ncloc="30" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+      <metrics loc="36" ncloc="30" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\DataFixtures\LoadBadgeData.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\DataFixtures\LoadBadgeData.php">
       <class name="App\DataFixtures\LoadBadgeData" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="15" coveredelements="0"/>
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </class>
       <line num="12" type="method" name="load" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="14" type="stmt" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="20" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
       <line num="30" type="stmt" count="0"/>
-      <metrics loc="31" ncloc="31" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="15" coveredelements="0"/>
+      <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\DataFixtures\PropertyFixture.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\DataFixtures\PropertyFixture.php">
       <class name="App\DataFixtures\PropertyFixture" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </class>
@@ -318,18 +332,19 @@
       <line num="40" type="stmt" count="0"/>
       <metrics loc="41" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\DataFixtures\UserFixtures.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\DataFixtures\UserFixtures.php">
       <class name="App\DataFixtures\UserFixtures" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
       </class>
       <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="16" type="stmt" count="0"/>
       <line num="17" type="stmt" count="0"/>
       <line num="19" type="method" name="load" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <metrics loc="36" ncloc="22" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <metrics loc="39" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\Badge.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\Badge.php">
       <class name="App\Entity\Badge" namespace="global">
         <metrics complexity="16" methods="13" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="0" elements="38" coveredelements="0"/>
       </class>
@@ -373,7 +388,7 @@
       <line num="133" type="stmt" count="0"/>
       <metrics loc="135" ncloc="108" classes="1" methods="13" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="0" elements="38" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\BadgeUnlock.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\BadgeUnlock.php">
       <class name="App\Entity\BadgeUnlock" namespace="global">
         <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
       </class>
@@ -391,7 +406,7 @@
       <line num="65" type="stmt" count="0"/>
       <metrics loc="67" ncloc="45" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\Contact.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\Contact.php">
       <class name="App\Entity\Contact" namespace="global">
         <metrics complexity="12" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="12" elements="30" coveredelements="18"/>
       </class>
@@ -427,7 +442,7 @@
       <line num="194" type="stmt" count="7"/>
       <metrics loc="198" ncloc="93" classes="1" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="12" elements="30" coveredelements="18"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\Log.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\Log.php">
       <class name="App\Entity\Log" namespace="global">
         <metrics complexity="16" methods="16" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="21" elements="40" coveredelements="35"/>
       </class>
@@ -473,7 +488,7 @@
       <line num="150" type="stmt" count="1"/>
       <metrics loc="152" ncloc="119" classes="1" methods="16" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="21" elements="40" coveredelements="35"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\Option.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\Option.php">
       <class name="App\Entity\Option" namespace="global">
         <metrics complexity="9" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="20" coveredelements="0"/>
       </class>
@@ -499,125 +514,136 @@
       <line num="78" type="stmt" count="0"/>
       <metrics loc="80" ncloc="62" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="20" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\Property.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\Property.php">
       <class name="App\Entity\Property" namespace="global">
-        <metrics complexity="45" methods="42" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="3" elements="112" coveredelements="4"/>
+        <metrics complexity="50" methods="45" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="78" coveredstatements="4" elements="123" coveredelements="5"/>
       </class>
-      <line num="139" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-      <line num="141" type="stmt" count="7"/>
-      <line num="142" type="stmt" count="7"/>
-      <line num="143" type="stmt" count="7"/>
-      <line num="145" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="147" type="stmt" count="0"/>
-      <line num="150" type="method" name="getTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="152" type="stmt" count="0"/>
-      <line num="155" type="method" name="setTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="157" type="stmt" count="0"/>
-      <line num="159" type="stmt" count="0"/>
-      <line num="162" type="method" name="getSlug" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="164" type="stmt" count="0"/>
+      <line num="144" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="146" type="stmt" count="7"/>
+      <line num="147" type="stmt" count="7"/>
+      <line num="148" type="stmt" count="7"/>
+      <line num="149" type="stmt" count="7"/>
+      <line num="151" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="153" type="stmt" count="0"/>
+      <line num="156" type="method" name="getTitle" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="158" type="stmt" count="0"/>
+      <line num="161" type="method" name="setTitle" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="163" type="stmt" count="0"/>
       <line num="165" type="stmt" count="0"/>
-      <line num="168" type="method" name="getDescription" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="168" type="method" name="getSlug" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="170" type="stmt" count="0"/>
-      <line num="173" type="method" name="setDescription" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="175" type="stmt" count="0"/>
-      <line num="177" type="stmt" count="0"/>
-      <line num="180" type="method" name="getSurface" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="182" type="stmt" count="0"/>
-      <line num="185" type="method" name="setSurface" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="187" type="stmt" count="0"/>
-      <line num="189" type="stmt" count="0"/>
-      <line num="192" type="method" name="getRooms" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="194" type="stmt" count="0"/>
-      <line num="197" type="method" name="setRooms" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="199" type="stmt" count="0"/>
-      <line num="201" type="stmt" count="0"/>
-      <line num="204" type="method" name="getBedrooms" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="206" type="stmt" count="0"/>
-      <line num="209" type="method" name="setBedrooms" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="211" type="stmt" count="0"/>
-      <line num="213" type="stmt" count="0"/>
-      <line num="216" type="method" name="getFloor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="218" type="stmt" count="0"/>
-      <line num="221" type="method" name="setFloor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="223" type="stmt" count="0"/>
-      <line num="225" type="stmt" count="0"/>
-      <line num="228" type="method" name="getPrice" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="230" type="stmt" count="0"/>
-      <line num="233" type="method" name="setPrice" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="235" type="stmt" count="0"/>
-      <line num="237" type="stmt" count="0"/>
-      <line num="240" type="method" name="getFormatPrice" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="242" type="stmt" count="0"/>
-      <line num="245" type="method" name="getHeat" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="247" type="stmt" count="0"/>
-      <line num="250" type="method" name="setHeat" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="252" type="stmt" count="0"/>
-      <line num="254" type="stmt" count="0"/>
-      <line num="257" type="method" name="getHeatType" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="259" type="stmt" count="0"/>
-      <line num="262" type="method" name="getCity" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="264" type="stmt" count="0"/>
-      <line num="267" type="method" name="setCity" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="269" type="stmt" count="0"/>
-      <line num="271" type="stmt" count="0"/>
-      <line num="274" type="method" name="getAddress" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="276" type="stmt" count="0"/>
-      <line num="279" type="method" name="setAddress" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="281" type="stmt" count="0"/>
-      <line num="283" type="stmt" count="0"/>
-      <line num="286" type="method" name="getPostalCode" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="288" type="stmt" count="0"/>
-      <line num="291" type="method" name="setPostalCode" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="293" type="stmt" count="0"/>
-      <line num="295" type="stmt" count="0"/>
-      <line num="298" type="method" name="getSold" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="300" type="stmt" count="0"/>
-      <line num="303" type="method" name="setSold" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="305" type="stmt" count="0"/>
-      <line num="307" type="stmt" count="0"/>
-      <line num="310" type="method" name="getCreated" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="312" type="stmt" count="0"/>
-      <line num="315" type="method" name="setCreated" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="317" type="stmt" count="0"/>
-      <line num="319" type="stmt" count="0"/>
-      <line num="327" type="method" name="getFilename" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="329" type="stmt" count="0"/>
-      <line num="339" type="method" name="setFilename" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="341" type="stmt" count="0"/>
-      <line num="343" type="stmt" count="0"/>
-      <line num="351" type="method" name="getImageFile" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="353" type="stmt" count="0"/>
-      <line num="363" type="method" name="setImageFile" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="365" type="stmt" count="0"/>
-      <line num="366" type="stmt" count="0"/>
-      <line num="367" type="stmt" count="0"/>
-      <line num="369" type="stmt" count="0"/>
-      <line num="372" type="method" name="getUpdatedAt" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="374" type="stmt" count="0"/>
-      <line num="377" type="method" name="setUpdatedAt" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="379" type="stmt" count="0"/>
-      <line num="381" type="stmt" count="0"/>
-      <line num="387" type="method" name="getOptions" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="389" type="stmt" count="0"/>
-      <line num="392" type="method" name="addOption" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="394" type="stmt" count="0"/>
+      <line num="171" type="stmt" count="0"/>
+      <line num="174" type="method" name="getDescription" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="176" type="stmt" count="0"/>
+      <line num="179" type="method" name="setDescription" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="181" type="stmt" count="0"/>
+      <line num="183" type="stmt" count="0"/>
+      <line num="186" type="method" name="getSurface" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="188" type="stmt" count="0"/>
+      <line num="191" type="method" name="setSurface" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="193" type="stmt" count="0"/>
+      <line num="195" type="stmt" count="0"/>
+      <line num="198" type="method" name="getRooms" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="200" type="stmt" count="0"/>
+      <line num="203" type="method" name="setRooms" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="205" type="stmt" count="0"/>
+      <line num="207" type="stmt" count="0"/>
+      <line num="210" type="method" name="getBedrooms" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="212" type="stmt" count="0"/>
+      <line num="215" type="method" name="setBedrooms" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="217" type="stmt" count="0"/>
+      <line num="219" type="stmt" count="0"/>
+      <line num="222" type="method" name="getFloor" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="224" type="stmt" count="0"/>
+      <line num="227" type="method" name="setFloor" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="229" type="stmt" count="0"/>
+      <line num="231" type="stmt" count="0"/>
+      <line num="234" type="method" name="getPrice" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="236" type="stmt" count="0"/>
+      <line num="239" type="method" name="setPrice" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="241" type="stmt" count="0"/>
+      <line num="243" type="stmt" count="0"/>
+      <line num="246" type="method" name="getFormatPrice" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="248" type="stmt" count="0"/>
+      <line num="251" type="method" name="getHeat" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="253" type="stmt" count="0"/>
+      <line num="256" type="method" name="setHeat" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="258" type="stmt" count="0"/>
+      <line num="260" type="stmt" count="0"/>
+      <line num="263" type="method" name="getHeatType" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="265" type="stmt" count="0"/>
+      <line num="268" type="method" name="getCity" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="270" type="stmt" count="0"/>
+      <line num="273" type="method" name="setCity" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="275" type="stmt" count="0"/>
+      <line num="277" type="stmt" count="0"/>
+      <line num="280" type="method" name="getAddress" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="282" type="stmt" count="0"/>
+      <line num="285" type="method" name="setAddress" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="287" type="stmt" count="0"/>
+      <line num="289" type="stmt" count="0"/>
+      <line num="292" type="method" name="getPostalCode" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="294" type="stmt" count="0"/>
+      <line num="297" type="method" name="setPostalCode" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="299" type="stmt" count="0"/>
+      <line num="301" type="stmt" count="0"/>
+      <line num="304" type="method" name="getSold" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="306" type="stmt" count="0"/>
+      <line num="309" type="method" name="setSold" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="311" type="stmt" count="0"/>
+      <line num="313" type="stmt" count="0"/>
+      <line num="316" type="method" name="getCreated" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="318" type="stmt" count="0"/>
+      <line num="321" type="method" name="setCreated" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="323" type="stmt" count="0"/>
+      <line num="325" type="stmt" count="0"/>
+      <line num="333" type="method" name="getFilename" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="335" type="stmt" count="0"/>
+      <line num="345" type="method" name="setFilename" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="347" type="stmt" count="0"/>
+      <line num="349" type="stmt" count="0"/>
+      <line num="357" type="method" name="getImageFile" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="359" type="stmt" count="0"/>
+      <line num="369" type="method" name="setImageFile" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="371" type="stmt" count="0"/>
+      <line num="372" type="stmt" count="0"/>
+      <line num="373" type="stmt" count="0"/>
+      <line num="375" type="stmt" count="0"/>
+      <line num="378" type="method" name="getUpdatedAt" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="380" type="stmt" count="0"/>
+      <line num="383" type="method" name="setUpdatedAt" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="385" type="stmt" count="0"/>
+      <line num="387" type="stmt" count="0"/>
+      <line num="393" type="method" name="getOptions" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="395" type="stmt" count="0"/>
-      <line num="396" type="stmt" count="0"/>
-      <line num="399" type="stmt" count="0"/>
-      <line num="402" type="method" name="removeOption" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="404" type="stmt" count="0"/>
+      <line num="398" type="method" name="addOption" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="400" type="stmt" count="0"/>
+      <line num="401" type="stmt" count="0"/>
+      <line num="402" type="stmt" count="0"/>
       <line num="405" type="stmt" count="0"/>
-      <line num="406" type="stmt" count="0"/>
-      <line num="409" type="stmt" count="0"/>
-      <line num="412" type="method" name="getUsers" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="414" type="stmt" count="0"/>
-      <line num="417" type="method" name="setUsers" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="419" type="stmt" count="0"/>
-      <line num="421" type="stmt" count="0"/>
-      <metrics loc="424" ncloc="319" classes="1" methods="42" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="3" elements="112" coveredelements="4"/>
+      <line num="408" type="method" name="removeOption" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="410" type="stmt" count="0"/>
+      <line num="411" type="stmt" count="0"/>
+      <line num="412" type="stmt" count="0"/>
+      <line num="415" type="stmt" count="0"/>
+      <line num="418" type="method" name="getUsers" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="420" type="stmt" count="0"/>
+      <line num="423" type="method" name="setUsers" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="425" type="stmt" count="0"/>
+      <line num="427" type="stmt" count="0"/>
+      <line num="433" type="method" name="getFavoris" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="435" type="stmt" count="0"/>
+      <line num="438" type="method" name="addFavori" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="440" type="stmt" count="0"/>
+      <line num="441" type="stmt" count="0"/>
+      <line num="444" type="stmt" count="0"/>
+      <line num="447" type="method" name="removeFavori" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="449" type="stmt" count="0"/>
+      <line num="450" type="stmt" count="0"/>
+      <line num="453" type="stmt" count="0"/>
+      <metrics loc="456" ncloc="345" classes="1" methods="45" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="78" coveredstatements="4" elements="123" coveredelements="5"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\PropertyFilter.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\PropertyFilter.php">
       <class name="App\Entity\PropertyFilter" namespace="global">
         <metrics complexity="7" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="18" coveredelements="0"/>
       </class>
@@ -642,88 +668,101 @@
       <line num="106" type="stmt" count="0"/>
       <metrics loc="105" ncloc="55" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="18" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Entity\User.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Entity\User.php">
       <class name="App\Entity\User" namespace="global">
-        <metrics complexity="27" methods="21" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="3" elements="65" coveredelements="4"/>
+        <metrics complexity="32" methods="24" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="22" elements="78" coveredelements="35"/>
       </class>
-      <line num="60" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="62" type="stmt" count="1"/>
-      <line num="63" type="stmt" count="1"/>
-      <line num="64" type="stmt" count="1"/>
-      <line num="66" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="68" type="stmt" count="0"/>
-      <line num="76" type="method" name="getUsername" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="78" type="stmt" count="0"/>
-      <line num="81" type="method" name="setUsername" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="83" type="stmt" count="0"/>
-      <line num="85" type="stmt" count="0"/>
-      <line num="91" type="method" name="getRoles" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="93" type="stmt" count="0"/>
-      <line num="95" type="stmt" count="0"/>
-      <line num="97" type="stmt" count="0"/>
-      <line num="100" type="method" name="setRoles" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="102" type="stmt" count="0"/>
-      <line num="104" type="stmt" count="0"/>
-      <line num="110" type="method" name="getPassword" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="112" type="stmt" count="0"/>
-      <line num="115" type="method" name="setPassword" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="117" type="stmt" count="0"/>
-      <line num="119" type="stmt" count="0"/>
-      <line num="125" type="method" name="getSalt" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="128" type="stmt" count="0"/>
-      <line num="134" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="138" type="stmt" count="0"/>
-      <line num="143" type="method" name="getLogs" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="145" type="stmt" count="0"/>
-      <line num="148" type="method" name="addLog" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="150" type="stmt" count="0"/>
+      <line num="65" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="67" type="stmt" count="2"/>
+      <line num="68" type="stmt" count="2"/>
+      <line num="69" type="stmt" count="2"/>
+      <line num="70" type="stmt" count="2"/>
+      <line num="72" type="method" name="getId" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="74" type="stmt" count="2"/>
+      <line num="82" type="method" name="getUsername" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="84" type="stmt" count="2"/>
+      <line num="87" type="method" name="setUsername" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="89" type="stmt" count="1"/>
+      <line num="91" type="stmt" count="1"/>
+      <line num="97" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="99" type="stmt" count="2"/>
+      <line num="101" type="stmt" count="2"/>
+      <line num="103" type="stmt" count="2"/>
+      <line num="106" type="method" name="setRoles" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="108" type="stmt" count="1"/>
+      <line num="110" type="stmt" count="1"/>
+      <line num="116" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="118" type="stmt" count="2"/>
+      <line num="121" type="method" name="setPassword" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="123" type="stmt" count="1"/>
+      <line num="125" type="stmt" count="1"/>
+      <line num="131" type="method" name="getSalt" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="134" type="stmt" count="2"/>
+      <line num="140" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="144" type="stmt" count="1"/>
+      <line num="149" type="method" name="getLogs" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="151" type="stmt" count="0"/>
-      <line num="152" type="stmt" count="0"/>
-      <line num="155" type="stmt" count="0"/>
-      <line num="158" type="method" name="removeLog" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="160" type="stmt" count="0"/>
+      <line num="154" type="method" name="addLog" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="156" type="stmt" count="0"/>
+      <line num="157" type="stmt" count="0"/>
+      <line num="158" type="stmt" count="0"/>
       <line num="161" type="stmt" count="0"/>
-      <line num="163" type="stmt" count="0"/>
-      <line num="164" type="stmt" count="0"/>
-      <line num="168" type="stmt" count="0"/>
-      <line num="171" type="method" name="__toString" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="173" type="stmt" count="0"/>
-      <line num="176" type="method" name="getEmail" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="178" type="stmt" count="0"/>
-      <line num="181" type="method" name="setEmail" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="183" type="stmt" count="0"/>
-      <line num="185" type="stmt" count="0"/>
-      <line num="188" type="method" name="isVerified" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="190" type="stmt" count="0"/>
-      <line num="193" type="method" name="setIsVerified" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="195" type="stmt" count="0"/>
-      <line num="197" type="stmt" count="0"/>
-      <line num="203" type="method" name="getProperties" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="205" type="stmt" count="0"/>
-      <line num="208" type="method" name="addProperty" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="210" type="stmt" count="0"/>
+      <line num="164" type="method" name="removeLog" visibility="public" complexity="3" crap="12" count="0"/>
+      <line num="166" type="stmt" count="0"/>
+      <line num="167" type="stmt" count="0"/>
+      <line num="169" type="stmt" count="0"/>
+      <line num="170" type="stmt" count="0"/>
+      <line num="174" type="stmt" count="0"/>
+      <line num="177" type="method" name="__toString" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="179" type="stmt" count="0"/>
+      <line num="182" type="method" name="getEmail" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="184" type="stmt" count="1"/>
+      <line num="187" type="method" name="setEmail" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="189" type="stmt" count="1"/>
+      <line num="191" type="stmt" count="1"/>
+      <line num="194" type="method" name="isVerified" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="196" type="stmt" count="2"/>
+      <line num="199" type="method" name="setIsVerified" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="201" type="stmt" count="0"/>
+      <line num="203" type="stmt" count="0"/>
+      <line num="209" type="method" name="getProperties" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="211" type="stmt" count="0"/>
-      <line num="212" type="stmt" count="0"/>
-      <line num="215" type="stmt" count="0"/>
-      <line num="218" type="method" name="removeProperty" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="220" type="stmt" count="0"/>
+      <line num="214" type="method" name="addProperty" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="216" type="stmt" count="0"/>
+      <line num="217" type="stmt" count="0"/>
+      <line num="218" type="stmt" count="0"/>
       <line num="221" type="stmt" count="0"/>
-      <line num="223" type="stmt" count="0"/>
-      <line num="224" type="stmt" count="0"/>
-      <line num="228" type="stmt" count="0"/>
-      <metrics loc="231" ncloc="176" classes="1" methods="21" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="3" elements="65" coveredelements="4"/>
+      <line num="224" type="method" name="removeProperty" visibility="public" complexity="3" crap="12" count="0"/>
+      <line num="226" type="stmt" count="0"/>
+      <line num="227" type="stmt" count="0"/>
+      <line num="229" type="stmt" count="0"/>
+      <line num="230" type="stmt" count="0"/>
+      <line num="234" type="stmt" count="0"/>
+      <line num="240" type="method" name="getFavoris" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="242" type="stmt" count="0"/>
+      <line num="245" type="method" name="addFavori" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="247" type="stmt" count="0"/>
+      <line num="248" type="stmt" count="0"/>
+      <line num="249" type="stmt" count="0"/>
+      <line num="252" type="stmt" count="0"/>
+      <line num="255" type="method" name="removeFavori" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="257" type="stmt" count="0"/>
+      <line num="258" type="stmt" count="0"/>
+      <line num="259" type="stmt" count="0"/>
+      <line num="262" type="stmt" count="0"/>
+      <metrics loc="265" ncloc="204" classes="1" methods="24" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="22" elements="78" coveredelements="35"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\EventListener\MaintenanceListener.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\EventListener\MaintenanceListener.php">
       <class name="App\EventListener\MaintenanceListener" namespace="global">
-        <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="5" elements="13" coveredelements="6"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="20" type="method" name="onKernelRequest" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="16" type="stmt" count="7"/>
+      <line num="17" type="stmt" count="7"/>
+      <line num="18" type="stmt" count="7"/>
+      <line num="20" type="method" name="onKernelRequest" visibility="public" complexity="2" crap="3.69" count="6"/>
+      <line num="23" type="stmt" count="6"/>
+      <line num="24" type="stmt" count="6"/>
       <line num="27" type="stmt" count="0"/>
       <line num="28" type="stmt" count="0"/>
       <line num="29" type="stmt" count="0"/>
@@ -731,19 +770,20 @@
       <line num="34" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
       <line num="37" type="stmt" count="1"/>
-      <metrics loc="36" ncloc="33" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
+      <metrics loc="36" ncloc="33" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="5" elements="13" coveredelements="6"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\EventSubscriber\BadgeSubscriber.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\EventSubscriber\BadgeSubscriber.php">
       <class name="App\EventSubscriber\BadgeSubscriber" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="1" elements="15" coveredelements="2"/>
+        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="16" coveredelements="0"/>
       </class>
       <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="35" type="stmt" count="0"/>
       <line num="36" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
       <line num="38" type="stmt" count="0"/>
-      <line num="40" type="method" name="getSubscribedEvents" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="43" type="stmt" count="1"/>
+      <line num="40" type="method" name="getSubscribedEvents" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="43" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="0"/>
       <line num="48" type="method" name="onBadgeUnlock" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="50" type="stmt" count="0"/>
       <line num="51" type="stmt" count="0"/>
@@ -752,17 +792,17 @@
       <line num="56" type="stmt" count="0"/>
       <line num="57" type="stmt" count="0"/>
       <line num="58" type="stmt" count="0"/>
-      <metrics loc="60" ncloc="48" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="1" elements="15" coveredelements="2"/>
+      <metrics loc="60" ncloc="48" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\EventSubscriber\ExceptionSubscriber.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\EventSubscriber\ExceptionSubscriber.php">
       <class name="App\EventSubscriber\ExceptionSubscriber" namespace="global">
-        <metrics complexity="17" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="1" elements="31" coveredelements="2"/>
+        <metrics complexity="17" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="2" elements="31" coveredelements="3"/>
       </class>
-      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="20" type="method" name="getSubscribedEvents" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="24" type="stmt" count="1"/>
+      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="17" type="stmt" count="7"/>
+      <line num="18" type="stmt" count="7"/>
+      <line num="20" type="method" name="getSubscribedEvents" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="24" type="stmt" count="0"/>
       <line num="29" type="method" name="processException" visibility="public" complexity="15" crap="240" count="0"/>
       <line num="31" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
@@ -789,9 +829,9 @@
       <line num="57" type="stmt" count="0"/>
       <line num="60" type="stmt" count="0"/>
       <line num="64" type="stmt" count="0"/>
-      <metrics loc="66" ncloc="64" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="1" elements="31" coveredelements="2"/>
+      <metrics loc="66" ncloc="64" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="2" elements="31" coveredelements="3"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Event\BadgeUnlockedEvent.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Event\BadgeUnlockedEvent.php">
       <class name="App\Event\BadgeUnlockedEvent" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="9" coveredelements="0"/>
       </class>
@@ -804,10 +844,10 @@
       <line num="37" type="stmt" count="0"/>
       <line num="40" type="method" name="getUser" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="42" type="stmt" count="0"/>
-      <line num="46" type="stmt" count="1"/>
+      <line num="46" type="stmt" count="0"/>
       <metrics loc="45" ncloc="36" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="9" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Event\PropertyCreatedEvent.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Event\PropertyCreatedEvent.php">
       <class name="App\Event\PropertyCreatedEvent" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
       </class>
@@ -816,10 +856,10 @@
       <line num="21" type="stmt" count="0"/>
       <line num="29" type="method" name="getProperty" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="31" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="0"/>
       <metrics loc="33" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\ContactType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\ContactType.php">
       <class name="App\Form\ContactType" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
       </class>
@@ -838,7 +878,7 @@
       <line num="38" type="stmt" count="0"/>
       <metrics loc="39" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\EditAccountType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\EditAccountType.php">
       <class name="App\Form\EditAccountType" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
       </class>
@@ -853,7 +893,7 @@
       <line num="29" type="stmt" count="0"/>
       <metrics loc="30" ncloc="30" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\OptionType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\OptionType.php">
       <class name="App\Form\OptionType" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
       </class>
@@ -866,7 +906,7 @@
       <line num="24" type="stmt" count="0"/>
       <metrics loc="25" ncloc="25" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\PropertyFilterType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\PropertyFilterType.php">
       <class name="App\Form\PropertyFilterType" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="14" coveredelements="0"/>
       </class>
@@ -886,7 +926,7 @@
       <line num="54" type="stmt" count="0"/>
       <metrics loc="56" ncloc="56" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="14" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\PropertyType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\PropertyType.php">
       <class name="App\Form\PropertyType" namespace="global">
         <metrics complexity="4" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="29" coveredelements="0"/>
       </class>
@@ -921,48 +961,48 @@
       <line num="59" type="stmt" count="0"/>
       <metrics loc="61" ncloc="61" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="0" elements="29" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Form\RegistrationFormType.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Form\RegistrationFormType.php">
       <class name="App\Form\RegistrationFormType" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="23" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
       </class>
-      <line num="19" type="method" name="buildForm" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="64" type="stmt" count="0"/>
-      <line num="66" type="method" name="configureOptions" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="68" type="stmt" count="0"/>
-      <line num="69" type="stmt" count="0"/>
-      <line num="71" type="stmt" count="0"/>
-      <metrics loc="72" ncloc="67" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="23" coveredelements="0"/>
+      <line num="19" type="method" name="buildForm" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="50" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="64" type="stmt" count="1"/>
+      <line num="66" type="method" name="configureOptions" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="68" type="stmt" count="1"/>
+      <line num="69" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
+      <metrics loc="72" ncloc="67" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Kernel.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Kernel.php">
       <class name="App\Kernel" namespace="global">
-        <metrics complexity="6" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="6" elements="17" coveredelements="6"/>
+        <metrics complexity="6" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
       </class>
-      <line num="14" type="method" name="configureContainer" visibility="protected" complexity="3" crap="3.14" count="1"/>
-      <line num="16" type="stmt" count="1"/>
-      <line num="17" type="stmt" count="1"/>
-      <line num="19" type="stmt" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <line num="21" type="stmt" count="1"/>
+      <line num="14" type="method" name="configureContainer" visibility="protected" complexity="3" crap="12" count="0"/>
+      <line num="16" type="stmt" count="0"/>
+      <line num="17" type="stmt" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
       <line num="22" type="stmt" count="0"/>
       <line num="23" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="0"/>
       <line num="27" type="method" name="configureRoutes" visibility="protected" complexity="3" crap="12" count="0"/>
       <line num="29" type="stmt" count="0"/>
       <line num="30" type="stmt" count="0"/>
@@ -971,9 +1011,9 @@
       <line num="34" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
-      <metrics loc="38" ncloc="38" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="6" elements="17" coveredelements="6"/>
+      <metrics loc="38" ncloc="38" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Mailer\Mailer.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Mailer\Mailer.php">
       <class name="App\Mailer\Mailer" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
       </class>
@@ -991,10 +1031,10 @@
       <line num="28" type="stmt" count="0"/>
       <line num="31" type="stmt" count="0"/>
       <line num="32" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="0"/>
       <metrics loc="35" ncloc="35" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Manager\BadgeManager.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Manager\BadgeManager.php">
       <class name="App\Manager\BadgeManager" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
       </class>
@@ -1016,10 +1056,10 @@
       <line num="65" type="stmt" count="0"/>
       <line num="73" type="method" name="getBadgeFor" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="75" type="stmt" count="0"/>
-      <line num="79" type="stmt" count="1"/>
+      <line num="79" type="stmt" count="0"/>
       <metrics loc="78" ncloc="56" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Notification\ContactNotification.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Notification\ContactNotification.php">
       <class name="App\Notification\ContactNotification" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="15" coveredelements="0"/>
       </class>
@@ -1038,10 +1078,10 @@
       <line num="41" type="stmt" count="0"/>
       <line num="43" type="stmt" count="0"/>
       <line num="44" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="0"/>
       <metrics loc="47" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="15" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\BadgeRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\BadgeRepository.php">
       <class name="App\Repository\BadgeRepository" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="22" coveredelements="0"/>
       </class>
@@ -1069,7 +1109,7 @@
       <line num="57" type="stmt" count="0"/>
       <metrics loc="88" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="22" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\BadgeUnlockRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\BadgeUnlockRepository.php">
       <class name="App\Repository\BadgeUnlockRepository" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </class>
@@ -1078,7 +1118,7 @@
       <line num="20" type="stmt" count="0"/>
       <metrics loc="50" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\LogRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\LogRepository.php">
       <class name="App\Repository\LogRepository" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
       </class>
@@ -1092,7 +1132,7 @@
       <line num="31" type="stmt" count="0"/>
       <metrics loc="62" ncloc="25" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\OptionRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\OptionRepository.php">
       <class name="App\Repository\OptionRepository" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </class>
@@ -1101,59 +1141,66 @@
       <line num="20" type="stmt" count="0"/>
       <metrics loc="50" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\PropertyRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\PropertyRepository.php">
       <class name="App\Repository\PropertyRepository" namespace="global">
-        <metrics complexity="10" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="40" coveredelements="0"/>
+        <metrics complexity="11" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="14" elements="47" coveredelements="18"/>
       </class>
-      <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="25" type="method" name="countForUser" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="27" type="stmt" count="0"/>
+      <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="23" type="stmt" count="4"/>
+      <line num="24" type="stmt" count="4"/>
+      <line num="26" type="method" name="countForUser" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="28" type="stmt" count="0"/>
       <line num="29" type="stmt" count="0"/>
       <line num="30" type="stmt" count="0"/>
       <line num="31" type="stmt" count="0"/>
       <line num="32" type="stmt" count="0"/>
-      <line num="39" type="method" name="findAllVisibleQuery" visibility="public" complexity="5" crap="30" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="40" type="method" name="findAllVisibleQuery" visibility="public" complexity="5" crap="30" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="0"/>
       <line num="46" type="stmt" count="0"/>
-      <line num="49" type="stmt" count="0"/>
-      <line num="51" type="stmt" count="0"/>
+      <line num="47" type="stmt" count="0"/>
+      <line num="50" type="stmt" count="0"/>
       <line num="52" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
       <line num="56" type="stmt" count="0"/>
       <line num="57" type="stmt" count="0"/>
       <line num="58" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
+      <line num="59" type="stmt" count="0"/>
       <line num="61" type="stmt" count="0"/>
-      <line num="64" type="stmt" count="0"/>
-      <line num="71" type="method" name="findLatest" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="73" type="stmt" count="0"/>
-      <line num="74" type="stmt" count="0"/>
-      <line num="75" type="stmt" count="0"/>
-      <line num="76" type="stmt" count="0"/>
-      <line num="77" type="stmt" count="0"/>
-      <line num="83" type="method" name="findPropertyByUser" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="62" type="stmt" count="0"/>
+      <line num="65" type="stmt" count="0"/>
+      <line num="72" type="method" name="findLatest" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="74" type="stmt" count="3"/>
+      <line num="75" type="stmt" count="3"/>
+      <line num="76" type="stmt" count="3"/>
+      <line num="77" type="stmt" count="3"/>
+      <line num="78" type="stmt" count="3"/>
+      <line num="84" type="method" name="findFavorisPropertyByUser" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="86" type="stmt" count="0"/>
       <line num="87" type="stmt" count="0"/>
       <line num="88" type="stmt" count="0"/>
+      <line num="89" type="stmt" count="0"/>
       <line num="90" type="stmt" count="0"/>
       <line num="91" type="stmt" count="0"/>
-      <line num="92" type="stmt" count="0"/>
-      <line num="95" type="method" name="findVisibleQuery" visibility="private" complexity="1" crap="2" count="0"/>
-      <line num="97" type="stmt" count="0"/>
-      <line num="98" type="stmt" count="0"/>
-      <metrics loc="129" ncloc="85" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="40" coveredelements="0"/>
+      <line num="98" type="method" name="findPropertyByUser" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="102" type="stmt" count="2"/>
+      <line num="103" type="stmt" count="2"/>
+      <line num="105" type="stmt" count="2"/>
+      <line num="106" type="stmt" count="2"/>
+      <line num="107" type="stmt" count="2"/>
+      <line num="110" type="method" name="findVisibleQuery" visibility="private" complexity="1" crap="1" count="3"/>
+      <line num="112" type="stmt" count="3"/>
+      <line num="113" type="stmt" count="3"/>
+      <metrics loc="144" ncloc="97" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="14" elements="47" coveredelements="18"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Repository\UserRepository.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Repository\UserRepository.php">
       <class name="App\Repository\UserRepository" namespace="global">
-        <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+        <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="2" elements="10" coveredelements="3"/>
       </class>
-      <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
+      <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="22" type="stmt" count="3"/>
+      <line num="23" type="stmt" count="3"/>
       <line num="28" type="method" name="upgradePassword" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="30" type="stmt" count="0"/>
       <line num="31" type="stmt" count="0"/>
@@ -1161,87 +1208,87 @@
       <line num="35" type="stmt" count="0"/>
       <line num="36" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
-      <metrics loc="67" ncloc="31" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+      <metrics loc="67" ncloc="31" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="2" elements="10" coveredelements="3"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Security\EmailVerifier.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Security\EmailVerifier.php">
       <class name="App\Security\EmailVerifier" namespace="global">
-        <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="22" coveredelements="0"/>
+        <metrics complexity="3" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="14" elements="22" coveredelements="16"/>
       </class>
-      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="26" type="method" name="sendEmailConfirmation" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="30" type="stmt" count="0"/>
-      <line num="31" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="26" type="method" name="sendEmailConfirmation" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
       <line num="46" type="method" name="handleEmailConfirmation" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="48" type="stmt" count="0"/>
       <line num="50" type="stmt" count="0"/>
       <line num="52" type="stmt" count="0"/>
       <line num="53" type="stmt" count="0"/>
       <line num="54" type="stmt" count="0"/>
-      <metrics loc="55" ncloc="52" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="22" coveredelements="0"/>
+      <metrics loc="55" ncloc="52" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="14" elements="22" coveredelements="16"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Security\LoginAuthenticator.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Security\LoginAuthenticator.php">
       <class name="App\Security\LoginAuthenticator" namespace="global">
-        <metrics complexity="13" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="37" coveredelements="0"/>
+        <metrics complexity="13" methods="8" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="26" elements="37" coveredelements="32"/>
       </class>
-      <line num="34" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="42" type="method" name="supports" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="48" type="method" name="getCredentials" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="51" type="stmt" count="0"/>
-      <line num="52" type="stmt" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <line num="63" type="method" name="getUser" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="65" type="stmt" count="0"/>
-      <line num="66" type="stmt" count="0"/>
+      <line num="34" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="36" type="stmt" count="7"/>
+      <line num="37" type="stmt" count="7"/>
+      <line num="38" type="stmt" count="7"/>
+      <line num="39" type="stmt" count="7"/>
+      <line num="40" type="stmt" count="7"/>
+      <line num="42" type="method" name="supports" visibility="public" complexity="2" crap="2" count="7"/>
+      <line num="44" type="stmt" count="7"/>
+      <line num="45" type="stmt" count="7"/>
+      <line num="48" type="method" name="getCredentials" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="51" type="stmt" count="2"/>
+      <line num="52" type="stmt" count="2"/>
+      <line num="53" type="stmt" count="2"/>
+      <line num="55" type="stmt" count="2"/>
+      <line num="56" type="stmt" count="2"/>
+      <line num="57" type="stmt" count="2"/>
+      <line num="60" type="stmt" count="2"/>
+      <line num="63" type="method" name="getUser" visibility="public" complexity="3" crap="3.03" count="2"/>
+      <line num="65" type="stmt" count="2"/>
+      <line num="66" type="stmt" count="2"/>
       <line num="67" type="stmt" count="0"/>
-      <line num="70" type="stmt" count="0"/>
-      <line num="72" type="stmt" count="0"/>
-      <line num="74" type="stmt" count="0"/>
-      <line num="77" type="stmt" count="0"/>
-      <line num="80" type="method" name="checkCredentials" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="82" type="stmt" count="0"/>
-      <line num="88" type="method" name="getPassword" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="90" type="stmt" count="0"/>
-      <line num="93" type="method" name="onAuthenticationSuccess" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="95" type="stmt" count="0"/>
+      <line num="70" type="stmt" count="2"/>
+      <line num="72" type="stmt" count="2"/>
+      <line num="74" type="stmt" count="1"/>
+      <line num="77" type="stmt" count="1"/>
+      <line num="80" type="method" name="checkCredentials" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="82" type="stmt" count="1"/>
+      <line num="88" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="90" type="stmt" count="1"/>
+      <line num="93" type="method" name="onAuthenticationSuccess" visibility="public" complexity="3" crap="3.58" count="2"/>
+      <line num="95" type="stmt" count="2"/>
       <line num="96" type="stmt" count="0"/>
-      <line num="100" type="stmt" count="0"/>
-      <line num="101" type="stmt" count="0"/>
+      <line num="100" type="stmt" count="2"/>
+      <line num="101" type="stmt" count="2"/>
       <line num="103" type="stmt" count="0"/>
-      <line num="108" type="method" name="getLoginUrl" visibility="protected" complexity="1" crap="2" count="0"/>
-      <line num="110" type="stmt" count="0"/>
-      <metrics loc="112" ncloc="107" classes="1" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="37" coveredelements="0"/>
+      <line num="108" type="method" name="getLoginUrl" visibility="protected" complexity="1" crap="1" count="2"/>
+      <line num="110" type="stmt" count="2"/>
+      <metrics loc="112" ncloc="107" classes="1" methods="8" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="26" elements="37" coveredelements="32"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Service\DbHandler.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Service\DbHandler.php">
       <class name="App\Service\DbHandler" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="15" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="3" elements="15" coveredelements="4"/>
       </class>
-      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
+      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="15" type="stmt" count="7"/>
+      <line num="16" type="stmt" count="7"/>
+      <line num="17" type="stmt" count="7"/>
       <line num="19" type="method" name="write" visibility="protected" complexity="1" crap="2" count="0"/>
       <line num="22" type="stmt" count="0"/>
       <line num="24" type="stmt" count="0"/>
@@ -1254,16 +1301,16 @@
       <line num="32" type="stmt" count="0"/>
       <line num="33" type="stmt" count="0"/>
       <line num="35" type="stmt" count="1"/>
-      <metrics loc="34" ncloc="33" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="15" coveredelements="0"/>
+      <metrics loc="34" ncloc="33" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="3" elements="15" coveredelements="4"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Service\DbProcessor.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Service\DbProcessor.php">
       <class name="App\Service\DbProcessor" namespace="global">
-        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="3" elements="10" coveredelements="4"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="16" type="stmt" count="7"/>
+      <line num="17" type="stmt" count="7"/>
+      <line num="18" type="stmt" count="7"/>
       <line num="20" type="method" name="__invoke" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="23" type="stmt" count="0"/>
       <line num="24" type="stmt" count="0"/>
@@ -1271,11 +1318,11 @@
       <line num="27" type="stmt" count="0"/>
       <line num="29" type="stmt" count="0"/>
       <line num="33" type="stmt" count="1"/>
-      <metrics loc="32" ncloc="31" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
+      <metrics loc="32" ncloc="31" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="3" elements="10" coveredelements="4"/>
     </file>
-    <file name="C:\xampp\htdocs\tuto_symfony\src\Service\Mailer.php">
+    <file name="C:\xampp\htdocs\agence_alive\src\Service\Mailer.php">
       <metrics loc="0" ncloc="0" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="46" loc="3596" ncloc="2725" classes="45" methods="223" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="770" coveredstatements="47" elements="993" coveredelements="71"/>
+    <metrics files="47" loc="3744" ncloc="2830" classes="46" methods="233" coveredmethods="59" conditionals="0" coveredconditionals="0" statements="801" coveredstatements="191" elements="1034" coveredelements="250"/>
   </project>
 </coverage>

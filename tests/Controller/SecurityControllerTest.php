@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests;
+namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -36,8 +36,8 @@ class SecurityControllerTest extends WebTestCase
         $client = static::createClient();
         $crawler = $client->request('GET', '/login');
         $form = $crawler->selectButton('Se connecter')->form([
-            'username' => 'test',
-            'password' => 'testtest'
+            'username' => 'Cartman',
+            'password' => 'cartman'
         ]);
         //Envoie les données au formulaire
         $client->submit($form);
