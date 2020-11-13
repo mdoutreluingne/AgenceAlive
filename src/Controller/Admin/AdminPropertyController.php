@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class AdminPropertyController extends AbstractController
 {
@@ -89,7 +90,7 @@ class AdminPropertyController extends AbstractController
     /**
      * @Route("/admin/property/{id}", name="admin.property.edit", methods={"GET|POST"})
      */
-    public function edit(Property $property, Request $request)
+    public function edit(Property $property, Request $request, TranslatorInterface $translator)
     {
         $form = $this->createForm(PropertyType::class, $property); //Création du formulaire
         $form->handleRequest($request);
@@ -98,7 +99,9 @@ class AdminPropertyController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($property);
             $this->em->flush();
-            $this->addFlash('success', 'Bien modifié avec success');
+
+            $message = $translator->trans("Property modified successfully");
+            $this->addFlash('success', $message);
             return $this->redirectToRoute('admin.property.index');
         }
 
