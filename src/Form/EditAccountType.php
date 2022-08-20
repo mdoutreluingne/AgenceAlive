@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -17,6 +19,15 @@ class EditAccountType extends AbstractType
         $builder
             ->add('username', TextType::class)
             ->add('email', EmailType::class)
+            ->add('locale', ChoiceType::class, [
+                'choices'  => [
+                    'fr' => 'fr',
+                    'en' => 'en',
+                ],
+                'required' => true,
+                'expanded' => true,
+                'multiple' => false
+            ])
             ->add('Valider', SubmitType::class)
         ;
     }

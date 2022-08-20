@@ -62,6 +62,11 @@ class User implements UserInterface
      */
     private $favoris;
 
+    /**
+     * @ORM\Column(type="string", length=2)
+     */
+    private $locale;
+
     public function __construct()
     {
         $this->logs = new ArrayCollection();
@@ -258,6 +263,18 @@ class User implements UserInterface
             $this->favoris->removeElement($favori);
             $favori->removeFavori($this);
         }
+
+        return $this;
+    }
+
+    public function getLocale(): ?string
+    {
+        return $this->locale;
+    }
+
+    public function setLocale(string $locale): self
+    {
+        $this->locale = $locale;
 
         return $this;
     }
