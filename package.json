@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.30.0",
+        "@symfony/webpack-encore": "^4.1.1",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.8.0"
@@ -14,6 +14,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "bazinga-translator": "^5.0.0",
+        "intl-messageformat": "^10.2.1",
         "jquery": "^3.5.1"
     }
 }

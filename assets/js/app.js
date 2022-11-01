@@ -7,6 +7,11 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
+var Translator = require('bazinga-translator');
+Translator.add("foo", "Baaar", "messages", "fr");
+console.log(Translator.trans('foo'));
+
+console.log(Translator.transChoice('apples', 0, {"count" : 0}));
 
 $("#contactButton").click(e => {
     e.preventDefault();

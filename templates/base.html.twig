@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale|split('_')[0] }}">
 	<head>
 		<meta charset="UTF-8">
 		<title>
@@ -89,6 +89,11 @@
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 					<script>
 							$('select').select2();
+					</script>
+					<script src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
+					<script src="{{ url('bazinga_jstranslation_js') }}"></script>
+					<script>
+						console.log(Translator.trans('foo'));
 					</script>
 					{% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
 		</body>
