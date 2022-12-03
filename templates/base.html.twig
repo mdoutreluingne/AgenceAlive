@@ -27,7 +27,7 @@
                                     <a class="navbar-brand" href="{{ path('home') }}">Agence Alive</a>
                                 </li>
 								<li class="nav-item">
-                                    <a class="nav-link {% if current_menu is defined and current_menu == 'properties'%}active{%endif%}" href="{{ path('property.index') }}">{% trans %}Acheter{% endtrans %}</a>
+                                    <a class="nav-link {% if current_menu is defined and current_menu == 'properties'%}active{%endif%}" href="{{ path('property.index') }}">{{ 'home.buy'|trans }}</a>
                                 </li>
 								{% if is_granted('ROLE_ADMIN') %}
 									<li class="nav-item">
@@ -91,10 +91,6 @@
 							$('select').select2();
 					</script>
 					<script src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
-					<script src="{{ url('bazinga_jstranslation_js') }}"></script>
-					<script>
-						console.log(Translator.trans('foo'));
-					</script>
 					{% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
 		</body>
 	</html>

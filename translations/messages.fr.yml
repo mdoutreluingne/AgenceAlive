@@ -1,2 +1,4 @@
-Acheter: Acheter
-foo: "Baaar"
+home:
+  buy: Acheter
+  welcome: Bonjour %name%
+placeholder: "Bonjour %username%, comment allez-vous ?"

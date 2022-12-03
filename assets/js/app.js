@@ -7,11 +7,17 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
-import Translator from 'bazinga-translator';
-Translator.add("foo", "Baaar", "messages", "fr");
-console.log(Translator.trans('foo'));
+const Translators = require('./translator');
 
-console.log(Translator.transChoice('apples', 0, {"count" : 0}));
+
+
+window.addEventListener("load", (event) => {
+    console.log(Translator.trans('placeholder', { "username" : "will" }));
+    console.log(Translator.trans('home.buy'));
+    console.log(Translator.locale);
+    alert('test traduction : ' + Translator.trans('home.buy'))
+});
+
 
 $("#contactButton").click(e => {
     e.preventDefault();
